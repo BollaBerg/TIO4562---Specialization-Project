@@ -1,0 +1,39 @@
+% Template author - Jon Arnt Kårstad, NTNU IMT
+% Author - Andreas B. Berg
+\documentclass[openany,oneside,a4paper,12pt]{book}
+
+% Importing document settings from our file "packages.sty"
+\usepackage{packages}
+
+% Beginning of document
+\begin{document}
+
+% Inserting title page
+\import{./}{title}
+
+% Defining front matter settings (Norsk: innstillinger for forord m.m.)
+\frontmatter
+
+% Insert abstract
+\import{./Sections/}{Abstract}
+
+% Inserting table of contents
+\tableofcontents
+
+% Inserting list of figures & list of tables
+% \listoffigures
+% \listoftables
+
+% Defining main matter settings (Norsk: innstillinger for hoveddelen av teksten)
+\mainmatter
+
+% Introduction explaining this LaTeX-template
+\import{./Sections/}{Introduction}
+\import{./Sections/}{Method}
+
+
+% Printing bibliography
+\printbibliography[heading = bibintoc, title = Bibliography]    % 'bibintoc' inserts our bibliography into the table of contents
+
+% End of document
+\end{document}
