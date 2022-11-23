@@ -1,0 +1,100 @@
+\section{Method}
+\label{sec:Method}
+% In general - check with sources emailed from Nhien ("Examples of literature review paper") that I expand and cite enough of the methodology.
+% Need more references - why are we doing this as a 7-step process? Where can we create a foundation for "this is the right methodology"
+%   One example - PRISMA
+% Need to be more detailed on the process. Should I include "the results were imported into Excel", etc?
+% Need to expand on the actual review - what was the methodology here? What columns were used in Excel? Were any added later during the review?
+%   Ideally - sources for using pre-coded codes for analysis.
+
+% Check if we actually follow PRISMA
+% This paper follows the PRISMA methodology \parencite{PRISMA_2022}.
+
+The research conducted for this paper consists of two literature reviews. First, a pilot study was conducted, to get an overview of the subject and terms used within the field of responsible AI. Based on the pilot, search strings and eligibility criteria were refined before the main study was conducted, and its results used for this paper. Both the literature reviews followed the same set of 7 steps, shown in \autoref{sec:method-steps}. All steps were done by the author himself.
+
+\subsection{Steps of the literature review}
+\label{sec:method-steps}
+The literature reviews consisted on 7 steps:
+
+\begin{description}
+    \item[\textnormal{(1)} Database search] A search was done using two databases - Scopus and Web of Science. These databases were selected to ensure maximum reach within the field, as they index a majority of peer reviewed journals relevant for this research. Both reviews limited their search results to documents written in the English language, and of type article, proceedings paper, book chapter or editorial.
+    
+    \item[\textnormal{(2)} Duplicate removal] The results from the two database searches were combined in one file. Any papers indexed by both databases were removed.
+    
+    \item[\textnormal{(3)} Title screening] The titles of the results were screened, to check their fit with the pre-selected criteria. Any uncertain documents were included and used in the next step.
+    
+    \item[\textnormal{(4)} Abstract screening] The abstract of the included results were screened, to check their fit with the pre-selected criteria. This process was done twice:
+    \begin{description}
+        \item[\textnormal{(4a)} Round one] The abstracts of all previously approved documents were reviewed. Any uncertain documents were used in round two.
+        \item[\textnormal{(4b)} Round two] The abstracts of the documents that were marked as uncertain in step (4a) were re-reviewed. Any documents that were still uncertain were excluded from the review.
+    \end{description}
+    
+    \item[\textnormal{(5)} Full-text screening] The full text of the previously approved documents were read, to check their fit with the pre-selected criteria. Any uncertain documents were included.
+    
+    \item[\textnormal{(6)} Snowballing] The reference lists of all approved documents were scanned, to find other relevant documents. Any possibly relevant documents went through the same steps as mentioned here, and any included documents were used as new sources of snowballing until no new and relevant articles were found. This was done to ensure maximum inclusion of relevant documents, and has been recommended by several studies (e.g., \cite{Greenhalgh_2005,Wohlin_2014}). Any uncertain documents were excluded.
+    
+    \item[\textnormal{(7)} The actual review] The results from both the systematic database search and snowballing were combined, and used to conduct the actual literature review.
+\end{description}
+
+A flowchart of this process, as well as the number of papers included in each step in the main study is shown in \autoref{fig:PRISMA-flowchart}.
+
+
+\subsection{Pilot study}
+The aim of the pilot study was to get an overview of the subject and terms used within the field of responsible AI, as well as to get familiar with, and test, the process of systematic literature reviews. 
+
+Two databases, Scopus and Web of Science, were searched for documents related to responsible artificial intelligence and other connected terms, as well as business. The results were screened using the steps mentioned in \autoref{sec:method-steps}. The complete search strings used can be seen in Appendix \ref{app:search-terms-pilot}.
+
+The result of the pilot study was a better understanding of the field of responsible AI, but it was quickly understood that the results did little to answer the posed research questions. Both the search strings and the eligibility criteria were therefore reviewed, and used for the main study.
+
+\subsubsection{Eligibility criteria}
+\autoref{tab:criteria-pilot} shows the criteria used for checking the eligibility of documents in the main study. Note that criteria 7 and 8 were only used for the title screening, to ensure maximum inclusion of relevant documents.
+
+\begin{table}[htp]
+    \centering
+    \begin{tabular}{cp{0.9\textwidth}}
+        \textbf{\#} & \textbf{Criteria} \\
+        \hline
+        1 & \textbf{Include} documents focusing on defining responsible AI or guidelines for responsible AI development. \\
+        2 & \textbf{Include} documents discussing antecedents for responsibility of AI systems. \\
+        3 & \textbf{Include} documents focusing on business advantages of Responsible AI systems. \\
+        \hline
+        4 & \textbf{Exclude} technical documents. \\
+        5 & \textbf{Exclude} documents focusing on general (non-responsible) AI. \\
+        6 & \textbf{Exclude} documents focusing on specific, concrete implementations of AI. \\
+        \hline
+        7 & \textbf{Include} documents discussing the future of AI. \\
+        8 & \textbf{Include} documents discussing ethical AI, ethics in AI or AI governance. \\
+    \end{tabular}
+    \caption[Inclusion/exclusion criteria used for the pilot study]{Inclusion/exclusion criteria used for the pilot study. Note that criteria 7 and 8 were only used for screening titles.}
+    \label{tab:criteria-pilot}
+\end{table}
+
+
+\subsection{Main study}
+The aim of the main study was to answer the research questions posed in \autoref{sec:Introduction}. This time, a wider search was conducted, searching the same two databases, Scopus and Web of Science, for documents directly related to responsible artificial intelligence. The documents were screened using the steps mentioned in \autoref{sec:method-steps}, and the results of the search are presented in the following sections. The complete search strings used can be seen in Appendix \ref{app:search-terms-main}.
+
+
+\subsubsection{Eligibility criteria}
+\autoref{tab:criteria-main} shows the criteria used for checking the eligibility of documents in the main study. Note that criteria 10 was only used for the title screening, to ensure maximum inclusion of relevant documents.
+
+\begin{table}[htp]
+    \centering
+    \begin{tabular}{cp{0.9\textwidth}}
+        \textbf{\#} & \textbf{Criteria} \\
+        \hline
+        1 & \textbf{Include} documents introducing responsible guidelines or general frameworks for responsible AI. \\
+        2 & \textbf{Include} documents focusing on defining responsible AI. \\
+        3 & \textbf{Include} analyses of existing, general frameworks for responsible AI. \\
+        4 & \textbf{Include} documents discussing antecedents for responsibility of AI systems. \\
+        5 & \textbf{Include} documents discussing business advantages of Responsible AI systems. \\
+        \hline
+        6 & \textbf{Exclude} documents of a technical nature, or introducing software systems. \\ % (i.e., “Responsible Artificial Intelligence in Healthcare: Predicting and Preventing Insurance Claim Denials for Economic and Social Wellbeing”)
+        7 & \textbf{Exclude} documents discussing general AI ethics, or components of responsible AI (such as bias or explainable AI) without introducing frameworks, guidelines or criteria for responsible AI in general. \\
+        8 & \textbf{Exclude} documents focusing on general (non-responsible) AI. \\ % (i.e., “Challenges in Machine Learning Application Development: An Industrial Experience Report”)
+        9 & \textbf{Exclude} documents focused on implementations of AI on specific cases. \\ % (i.e., “Slangvolution: A Causal Analysis of Semantic Change and Frequency Dynamics in Slang”, “Explainable artificial intelligence (XAI): closing the gap between image analysis and navigation in complex invasive diagnostic procedures”, “Privacy-preserving AI-enabled video surveillance for social distancing: responsible design and deployment for public spaces”)
+        \hline
+        10 & \textbf{Include} documents discussing ethical AI, ethics in AI or AI governance. \\
+    \end{tabular}
+    \caption[Inclusion/exclusion criteria used for the main study]{Inclusion/exclusion criteria used for the main study. Note that criteria 10 was only used for screening titles.}
+    \label{tab:criteria-main}
+\end{table}

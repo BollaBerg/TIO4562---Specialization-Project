@@ -7,10 +7,23 @@
 
 % See below for more own-stuff which requires other packages installed in-between
 
-% Remove "Chapter X" from chapter pages
-\usepackage{titlesec}
-% \titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
-\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{}{0pt}{\Huge}
+% Remove "Chapter X" from chapter pages (if book template)
+% \usepackage{titlesec}
+% % Default:
+% % \titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+% \titleformat{\chapter}[display]{\normalfont\huge\bfseries}{}{0pt}{\Huge}
+
+% For appendices titled "Appendix A", "Appendix B", etc.
+\usepackage[title]{appendix}
+
+% Enable "breakable" verbatim environment, for search terms
+% From https://tex.stackexchange.com/questions/309042/how-can-i-redefine-verbatim-to-wrap-lines-add-break-before-or-after-spaces
+\usepackage{verbatim}
+\makeatletter
+\newenvironment{verbatimBreakable}
+ {\def\@xobeysp{\ }\verbatim\rightskip=0pt plus 6em\relax}
+ {\endverbatim}
+\makeatother
 
 %%% END OWN STUFF %%%
 
@@ -34,23 +47,22 @@
 % -----------------------
 
 % --- Appendices ---
-\usepackage{appendix}
-\newcommand{\addappendix}{   % Self-created command to insert appendix with predefined settings
-    \newpage
-    \appendix
-    \section*{Appendix}   % Name of appendix
-    \addcontentsline{toc}{section}{Appendix}  % Add appendix name to table of contents
-    \renewcommand{\thesubsection}{\Alph{subsection}}    % Change numbering of section to upper-case letters.
-}
+% \usepackage{appendix}
+% \newcommand{\addappendix}{   % Self-created command to insert appendix with predefined settings
+%     \newpage
+%     \appendix
+%     \section*{Appendix}   % Name of appendix
+%     \addcontentsline{toc}{section}{Appendix}  % Add appendix name to table of contents
+%     \renewcommand{\thesubsection}{\Alph{subsection}}    % Change numbering of section to upper-case letters.
+% }
 
 % --- Bibliography & References---  
 \usepackage[backend = biber,    % Recommended backend for sorting bibliography
             style = authoryear-comp,    % Close to the 'Harvard' referencing style
-            urldate = long,     % Long: 24th Mar. 1997 | Short: 24/03/1997
+            urldate = short,     % Long: 24th Mar. 1997 | Short: 24/03/1997
             maxcitenames = 2,   % Number of authors in cite before replaced with 'Author#1 et al.'
+            defernumbers=true
             ]{biblatex}
-\addbibresource{references.bib}     % Adding our file containing the references
-% \addbibresource{reference_2.bib} is possible if we want to add several reference files
 
 \usepackage{caption}        % Enables controlling the look and feel of captions, see package documentation
 \usepackage{subcaption}     % Recommended when making sub-figures
@@ -63,7 +75,7 @@
 % --- Flow Charts ---
 % Keep in mind that you may customize these flow chart settings to fit your own preferences.
 \usepackage{tikz}
-\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{shapes,arrows,positioning,chains}
 \tikzstyle{decision} = [diamond, draw, fill=blue!20, 
     text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
 \tikzstyle{block} = [rectangle, draw, fill=blue!20, 
@@ -74,10 +86,10 @@
 
 % --- Front matter ---
 % Front matter is located before the table of contents, e.g. preface (Norsk: forord) and often has separate settings
-% Commented out due to using "Book" documentclass
-% \newcommand{\frontmatter}{
-%     \pagenumbering{roman}   % Setting page numbering to lower-case roman
-% }
+% Comment out when using "Book" documentclass
+\newcommand{\frontmatter}{
+    \pagenumbering{roman}   % Setting page numbering to lower-case roman
+}
 
 % --- General ---
 \usepackage{import}     % Enable importing of sections
@@ -118,11 +130,11 @@
 
 % --- Main matter ---
 % This is the main part of the paper.
-% Commented out due to using "Book" document class
-% \newcommand{\mainmatter}{
-%     \newpage
-%     \pagenumbering{arabic}  % Setting page numbering to normal integers
-% }
+% Comment out when using "Book" document class
+\newcommand{\mainmatter}{
+    \newpage
+    \pagenumbering{arabic}  % Setting page numbering to normal integers
+}
 
 % --- Mathematics ---
 \usepackage{bm}         % Bold text in math mode
@@ -148,10 +160,26 @@
 %%% END TEMPLATE STUFF %%%
 
 %%% MORE OWN STUFF %%%
+% Add references
+\addbibresource{References/review.bib}      % Add results from review
+\addbibresource{References/method.bib}      % Add references for method section
+\addbibresource{References/other.bib}       % Add other references
+
+% Add keyword "litrev" automatically to all files in References/review.bib
+% Gotten from https://tex.stackexchange.com/a/35779
+\DeclareSourcemap{
+  \maps[datatype=bibtex, overwrite]{
+    \map{
+      \perdatasource{References/review.bib}
+      \step[fieldset=KEYWORDS, fieldvalue={,litrev}, append]
+    }
+  }
+}
+
 % % Write bibliography as Last, First name
-% \DeclareNameAlias{author}{family-given}
-% \DeclareNameAlias{editor}{family-given}
-% \DeclareNameAlias{translator}{family-given}
+\DeclareNameAlias{author}{family-given}
+\DeclareNameAlias{editor}{family-given}
+\DeclareNameAlias{translator}{family-given}
 
 % % Separate authors with ";" instead of ","
 % \DeclareDelimFormat[bib]{multinamedelim}{\addsemicolon\space}

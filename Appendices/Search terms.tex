@@ -1,0 +1,67 @@
+\section{Search terms}
+Search terms used for the two literature reviews.
+
+\subsection{Pilot study}
+\label{app:search-terms-pilot}
+
+\textbf{Scopus}
+% Raw
+% \begin{verbatimBreakable}
+% ALL ( "responsible AI" )  OR  ( TITLE-ABS-KEY ( "machine learning"  OR  "artificial intelligence"  OR  "ai" )  AND  TITLE-ABS-KEY ( "responsible" ) )  AND  ( TITLE-ABS-KEY ( business* ) )  AND  ( LIMIT-TO ( DOCTYPE ,  "ar" )  OR  LIMIT-TO ( DOCTYPE ,  "cp" )  OR  LIMIT-TO ( DOCTYPE ,  "ch" )  OR  LIMIT-TO ( DOCTYPE ,  "ed" ) )  AND  ( LIMIT-TO ( LANGUAGE ,  "English" ) ) 
+% \end{verbatimBreakable}
+
+% Formatted
+\begin{verbatimBreakable}
+ALL ( "responsible AI" )
+OR (
+TITLE-ABS-KEY ( "machine learning" OR "artificial intelligence" OR "ai" )
+AND TITLE-ABS-KEY ( "responsible" )
+)
+AND (
+TITLE-ABS-KEY ( business* )
+)
+AND (
+LIMIT-TO ( DOCTYPE , "ar" )
+OR LIMIT-TO ( DOCTYPE , "cp" )
+OR LIMIT-TO ( DOCTYPE , "ch" )
+OR LIMIT-TO ( DOCTYPE , "ed" )
+)
+AND (
+LIMIT-TO ( LANGUAGE , "English" )
+)
+\end{verbatimBreakable}
+
+\textbf{Web of Science}
+\begin{verbatimBreakable}
+(ALL=("responsible AI") OR (TS=("machine learning" OR "artificial intelligence" OR ai) AND TS=(responsible))) AND TS=(business*) AND LA=(English)
+\end{verbatimBreakable}
+
+
+\newpage
+\subsection{Main study}
+\label{app:search-terms-main}
+
+\textbf{Scopus}
+% Raw
+% \begin{verbatimBreakable}
+% TITLE-ABS-KEY ( "responsible AI"  OR  "responsible artificial intelligence" )  AND  ( LIMIT-TO ( DOCTYPE ,  "ar" )  OR  LIMIT-TO ( DOCTYPE ,  "cp" )  OR  LIMIT-TO ( DOCTYPE ,  "ch" )  OR  LIMIT-TO ( DOCTYPE ,  "ed" ) )  AND  ( LIMIT-TO ( LANGUAGE ,  "English" ) ) 
+% \end{verbatimBreakable}
+
+% Formatted
+\begin{verbatimBreakable}
+TITLE-ABS-KEY ( "responsible AI" OR "responsible artificial intelligence" )
+AND (
+LIMIT-TO ( DOCTYPE , "ar" )
+OR LIMIT-TO ( DOCTYPE , "cp" )
+OR LIMIT-TO ( DOCTYPE , "ch" )
+OR LIMIT-TO ( DOCTYPE , "ed" )
+)
+AND (
+LIMIT-TO ( LANGUAGE , "English" )
+)
+\end{verbatimBreakable}
+
+\textbf{Web of Science}
+\begin{verbatimBreakable}
+(ALL=("responsible AI") OR ALL=("responsible artificial intelligence")) AND LA=(English) AND DT=(Article OR Book Chapter OR Editorial Material OR Proceedings Paper OR Review)
+\end{verbatimBreakable}

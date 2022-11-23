@@ -1,0 +1,53 @@
+% Adapted from https://tex.stackexchange.com/a/263761
+
+\begin{tikzpicture}[
+    node distance=15mm and 10mm,
+    start chain=going below,
+ mynode/.style = {
+        draw, rectangle, align=center, text width=4cm,
+        font=\small, inner sep=3ex, outer sep=0pt,
+        on chain},
+mylabel/.style = {
+        draw, rectangle, align=center, rounded corners, 
+        font=\small\bfseries, inner sep=1ex, outer sep=0pt,
+        fill=cyan!30, minimum height=32mm,
+        on chain},
+every join/.style = arrow,
+     arrow/.style = {very thick,-stealth}
+                    ] 
+\coordinate (tc);
+% the title
+\node[above=of tc,font=\bfseries] {Literature Review Flow Diagram};
+% the nodes at the top
+\node (n1a) [mynode, left=of tc]    {206 records from Scopus};
+\node (n1b) [mynode,right=of tc]    {191 records from Web of Science};
+    % the chain in the center
+\node (n2)  [mynode, below=of tc]   {(1) 397 records in total};
+\node (n3)  [mynode,join]   {289 titles screened};
+\node (n4)  [mynode,join]   {217 abstracts screened};
+\node (n5)  [mynode,join]   {57 full-text documents accessed for eligibility};
+\node (n6)  [mynode,join,yshift=-7.5mm]   {\# documents included in literature review};
+% the branches to the right
+\node (n2r) [mynode,right=of n2]    {(2) 108 \mbox{duplicates} removed};
+\node (n3r) [mynode,right=of n3]    {(3) 72 records excluded};
+\node (n4r) [mynode,right=of n4]    {(4a) 58 records \mbox{excluded} in round one \\ (4b) 102 records \mbox{excluded} in round two};
+\node (n5r) [mynode,right=of n5]    {(5) \# full-text \mbox{documents} excluded};
+\node (sb) [mynode,below=of n5r,yshift=10mm]    {(6) \# documents from snowballing};
+% lines not included in join                                        
+\draw[arrow] ([xshift=+22mm] n1a.south) coordinate (a)
+                                       -- (a |- n2.north);
+\draw[arrow] ([xshift=-22mm] n1b.south) coordinate (b)
+                                       -- (b |- n2.north);
+\draw[arrow] (n2) -- (n2r);
+\draw[arrow] (n3) -- (n3r);
+\draw[arrow] (n4) -- (n4r);
+\draw[arrow] (n5) -- (n5r);
+\draw[arrow] (sb.west) |- ([yshift=-12.5mm] n5.south);
+% the labels on the left
+    \begin{scope}[node distance=3mm]
+\node[mylabel,below left=-3mm and 4mm of n1a.north west,minimum height=50mm] {\rotatebox{90}{Identification (1-2)}};
+\node[mylabel,minimum height=80mm]  {\rotatebox{90}{Screening (3-5)}};
+% \node[mylabel]  {\rotatebox{90}{Eligibility}};
+\node[mylabel,minimum height=37.5mm]  {\rotatebox{90}{Inclusion (6-7)}};
+    \end{scope}
+\end{tikzpicture}

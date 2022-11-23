@@ -1,9 +1,11 @@
 % Template author - Jon Arnt Kårstad, NTNU IMT
 % Author - Andreas B. Berg
-\documentclass[openany,oneside,a4paper,12pt]{book}
+% \documentclass[openany,oneside,a4paper,12pt]{book}
+\documentclass[a4paper,12pt]{article}
 
 % Importing document settings from our file "packages.sty"
 \usepackage{packages}
+
 
 % Beginning of document
 \begin{document}
@@ -15,25 +17,39 @@
 \frontmatter
 
 % Insert abstract
-\import{./Sections/}{Abstract}
+\import{./Sections/}{00 Abstract}
+\newpage
 
 % Inserting table of contents
 \tableofcontents
 
 % Inserting list of figures & list of tables
-% \listoffigures
-% \listoftables
+\listoffigures
+\listoftables
 
 % Defining main matter settings (Norsk: innstillinger for hoveddelen av teksten)
 \mainmatter
 
 % Introduction explaining this LaTeX-template
-\import{./Sections/}{Introduction}
-\import{./Sections/}{Method}
+\import{./Sections/}{10 Introduction}
+\import{./Sections/}{20 Method}
+\import{./Sections/}{30 Results}
+\import{./Sections/}{40 Discussion}
+\import{./Sections/}{50 Limitations}
+\import{./Sections/}{60 Conclusion}
 
 
 % Printing bibliography
-\printbibliography[heading = bibintoc, title = Bibliography]    % 'bibintoc' inserts our bibliography into the table of contents
+\section{References}
+\printbibliography[heading = subbibnumbered, title = {Literature review}, keyword={litrev}]
+\printbibliography[heading = subbibnumbered, title = {Other references}, notkeyword={litrev}]
+
+% Appendices
+\appendix
+\begin{appendices}
+\newpage
+    \import{./Appendices/}{Search terms}
+\end{appendices}
 
 % End of document
 \end{document}
