@@ -99,7 +99,7 @@
 
 % --- General ---
 \usepackage{import}     % Enable importing of sections
-\usepackage{csquotes}   % Provides international handling of quote marks. Especially useful for bibliography management using BibLaTeX
+\usepackage[english=american]{csquotes}   % Provides international handling of quote marks. Especially useful for bibliography management using BibLaTeX
 \usepackage{hyperref}   % Hyper-references, possible to change color
 \hypersetup{    % Color of hyper-references
     colorlinks,
@@ -192,7 +192,16 @@
 % % Separate authors with ";" instead of ","
 % \DeclareDelimFormat[bib]{multinamedelim}{\addsemicolon\space}
 
+% Override quote symbols to get "quotes with 'second level quotes' correctly"
+\DeclareQuoteStyle{british}
+  {\textquotedblleft}
+  {\textquotedblright}
+  {\textquoteleft}
+  {\textquoteright}
+
 % Use todonotes as a way to "send" comments to Nhien
+% REMOVE ENTIRE BLOCK BEFORE SUBMITTING!!!
+\setlength {\marginparwidth }{2cm}
 \usepackage[textsize=scriptsize]{todonotes}
 
 %%% END OWN STUFF %%%

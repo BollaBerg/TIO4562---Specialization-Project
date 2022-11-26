@@ -1,16 +1,54 @@
 \section{Definitions}
 \label{sec:Definitions}
 % Definitions (both from review and thought-up myself)
+Although it falls slightly outside of the intended scope of this paper, it is necessary for a good understanding of responsible artificial intelligence to look at underlying terms and ensure clearly defined definitions related to the field. While many of the reviewed papers contain interesting and well-thought-out definitions, most of them wary significantly. There is thus a need to unify the definitions found in the field. To do so, this paper use the definitions found during the review, as well as some secondary material, to create classical definitions \parencite[p. 36]{Seppälä_2014} of the terms \textit{artificial intelligence}, \textit{artificial intelligence system} and \textit{responsible artificial intelligence}.
 
 % - Responsiblity (perhaps in Results?)
 
-% \subsection{Artificial intelligence}
-% - Intelligence
-%       "Although it might be considered to be beyond the scope of this paper, it is worth noting the discussion held around general theories of explanation in the realm of" [Intelligence] (Barredo Arrieta et al.)
-% - Artificial intelligence
+\subsection{Artificial intelligence}
+\label{sec:definition-ai}
+Not all the reviewed papers define the term, and the definitions that are mentioned differ in both wording and inclusion. For instance,
+\todo{Figure out why this reference has two names} % It works nicely once I remove Mikalef_2021, or if I have same authors for both papers. It may have something to do with Mikalef repeating itself?
+\textcite{Mikalef_2022} builds on \textcite{Mikalef_2021} and define AI as \textquote{the ability of a system to identify, interpret, make inferences, and learn from data to achieve predetermined organisational and societal goals} (p. 258), thus adopting a definition removed from technology but based on learning. The notion of learning is repeated by \textcite{Dignum_2021}, who defines AI as \textquote{A (computational) technology that is able to infer patterns and possibly draw conclusions from data} (p.2). Her definition differs from that of \citeauthor{Mikalef_2022} in that she focuses on the technology, rather than the system, and she does not include the notion of the system's goals.
+
+Focusing strongly on the outcome and technological side of the technology, \textcite{Brand_2022} bases his definition on the Oxford dictionary definition of AI, defining it as \textquote{the theory and development of computer systems able to perform tasks normally requiring human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages} (p. 130-131). In a similar vein, \textcite{Havrda_2020} adopts the broad definition of AI given by \textcite{IEEE_vision} as \textquote{autonomous or intelligent software when installed into other software and/or hardware systems that are able to exercise independent reasoning, decision-making, intention forming, and motivating skills according to self-defined principles} (p. 1).
+
+Finally, several of the included papers focus on an ability of simulating humans. \textcite{Liu_2021} defines AI as \textquote{A broad range of techniques and approaches of computer science to simulate human intelligence in machines that are programmed for thinking like humans and mimic human behaviours, capable of performing tasks} (p. 3-4). Similarly, \textcite{vanBruxvoort_2021} adopt the definition given by \textcite{Shubhendu_2013}, and define AI as \textquote{the study of ideas to bring into being machines that respond to stimulation consistent with traditional responses from humans, given the human capacity for contemplation, judgment and intention. Each such machine should engage in critical appraisal and selection of differing opinions within itself} (p. 3).
+
+As shown, there exists a wide range of definitions of AI. All of them lack certain characteristics, and thus this paper creates a new, at least compared to the reviewed papers, definition of AI. The notion of artificial intelligence is built on the idea of \textit{intelligence}, and that is thus a natural starting point for a new definition. \textcite{Legg_2007} presents a selection of definitions of intelligence, gathered from encyclopedias, psychologists and AI researchers. Combining these, they define intelligence as follows:
+\begin{displayquote}[{\cite[p. 9]{Legg_2007}}][.]
+    Intelligence measures an agent’s ability to achieve goals in a wide range of environments
+\end{displayquote}
+Following the structure given by \textcite{Seppälä_2014}, the definition of intelligence constitutes the majority of the differentia of the definition, so all that is left is to conclude the genus.
+
+One way of finding the genus of the definition of artificial intelligence is through defining the term \textit{artificial}. An in-depth attempt at this is done by \parencite{Bianchini_2021}, who compares synthetic biology and artificial intelligence to create a common definition of what can be considered artificial. In the end, \citeauthor{Bianchini_2021} concludes that
+\begin{displayquote}[{\cite[p. 13]{Bianchini_2021}}][.]
+    The artificial is what is humanly constructed, often in a natural model, also through the manipulation of natural systems and processes, and maintains existing and acting/operating/behaving in an open-ended context or environment without human control, regardless the substance or materials of its constituent parts
+\end{displayquote}
+While the idea of the definition is interesting, some key errors appear when using this definition for artificial intelligence. First, there already exists cases of AI constructing other instances of AI \parencite{AI_making_AI}, thus invalidating the first part of the definition. Secondly, calls are made for using AI to work alongside humans instead of replacing them \parencite{AI_alongside}, a notion that is repeated by several of the reviewed papers (e.g., \cite{Vetro_2019,Wang_2021,Doorn_2021,Brand_2022,Havrda_2020}). As such, the second part of the definition falls apart, leaving little relevant information to be gathered from the proposed definition. The same can be seen when looking at ordinary dictionary entries. The most relevant definition of artificial by Merriam-Webster (\cite{dictionary_artificial}) defines it as \textquote{humanly contrived often on a natural model}. Here, too, the issue of AI constructing other instances of AI arises.
+
+It is clear that typical definitions of artificial do not cover the artificiality of artificial intelligence. Instead of trying to define artificial then move to the combined term, another option is to consider similarities that exist between existing artificial intelligence technologies, then use those to create the complete definition. While this runs the risks of creating a prototypical definition \parencite[p. 36]{Seppälä_2014}, rather than the stated goal of a classical definition, this can be avoided by selecting sufficiently general similarities.
+
+Common among the definitions given by the reviewed papers is the notion that artificial intelligence technology is based on computing and software, e.g., \textquote{...algorithm-driven computing technology...} \parencite[p. 1]{Siala_2022}, \textquote{...computer systems...} \parencite[p. 130]{Brand_2022}, \textquote{A (computational) technology...} \parencite[p. 2]{Dignum_2021}, \textquote{Autonomous or intelligent software...} \parencite[p. 1]{Havrda_2020}, \textquote{...techniques and approaches of computer science...} \parencite[p. 3]{Liu_2021}, and \textquote{Machine-based systems...} \parencite[p. 1]{Lukkien_2021}. This largely aligns with the original idea of artificial intelligence, which was based on \textquote{a shared vision that computers can be made to perform intelligent tasks} \parencite[p. 87]{Moor_2006}.
+
+Combining this base of computers and software with the definition of intelligence, \textit{artificial intelligence} can be defined as follows:
+\begin{displayquote}
+    An artificial intelligence is a software- or semi-software based technology that is able to achieve defined goals in a wide range of environments.
+\end{displayquote}
+
+This definition of artificial intelligence covers several parts of the above-mentioned definitions. Achieving goals is closely related to the definition used by \textcite{Mikalef_2022}, and the definitions uses by \textcite{Brand_2022,Havrda_2020} are covered by selectively choosing goals. Likewise, this definition aligns with the definitions put forth by \textcite{Liu_2021,vanBruxvoort_2021}, but explicitly defines what constitutes \textquote{human intelligence}.
+
+While encompassing much, this definition does not say anything about data, which is mentioned by \textcite{Mikalef_2022,Dignum_2021}. This means that also technologies that do not use data, but are able to operate in a wide range of environments, are considered as artificial intelligences. While the idea of artificial intelligence operating without large amounts of data may be considered strange in times of big data \parencite{Singh_2022} and deep learning \parencite{Lecun_2015}, this ensures potential future intelligent technologies are included in the definition, no matter the amount of data they use.
+
+The rest of this paper will be based on this definition.
+
+
+\subsection{Artificial intelligence system}
+\todo[inline]{Insert the definition of AI into a lifecycle socio-technical system}
 % - AI system
 %       "We take a socio-technical perspective, i.e., view the whole system of the algorithm as a technical component implemented in a technical infrastructure and an organizational structure accompanied by associated rules and regulations" (van Bruxvoort and van Keulen)
 % - Lifecycle socio-technical system
 
-% \subsection{Responsible AI}
+\subsection{Responsible artificial intelligence}
+\todo[inline]{I am unsure if the definition of RAI should come here, or as a result (i.e., answering RQ1)}
 % As the benefits of AI are widely discussed, we will consider AI systems to be the default (i.e., what is compared against), so any discussed business advantages are of the responsible part, not the AI part
