@@ -25,6 +25,12 @@
  {\endverbatim}
 \makeatother
 
+% Nicer tables
+\usepackage{booktabs}
+
+% Enable text color (for notes to Nhien)
+\usepackage{xcolor}
+
 %%% END OWN STUFF %%%
 
 %%% TEMPLATE STUFF %%%
@@ -162,7 +168,9 @@
 %%% MORE OWN STUFF %%%
 % Add references
 \addbibresource{References/review.bib}      % Add results from review
-\addbibresource{References/method.bib}      % Add references for method section
+\addbibresource{References/method.bib}      % Add references for method
+\addbibresource{References/definitions.bib} % Add references for definitions
+\addbibresource{References/further work.bib}  % Add references for further work
 \addbibresource{References/other.bib}       % Add other references
 
 % Add keyword "litrev" automatically to all files in References/review.bib
@@ -183,5 +191,8 @@
 
 % % Separate authors with ";" instead of ","
 % \DeclareDelimFormat[bib]{multinamedelim}{\addsemicolon\space}
+
+% Use todonotes as a way to "send" comments to Nhien
+\usepackage[textsize=scriptsize]{todonotes}
 
 %%% END OWN STUFF %%%
