@@ -1,6 +1,8 @@
-\section{Results}
+\section{Findings}
 \label{sec:Results}
 % \subsection{Descriptive Results} % See Lukkien et al.
+\todo[inline]{Descriptive results - number of papers per stage, results from methodology. Include any relevant observations -- distribution of methodology (reviews vs primary (qualitative / quantitative) studies). Consider including an overview of each paper with its context and methodology (and possibly more?)}
+
 % Number of papers per stage, results from the methodology
 \begin{figure}[p]
     \centering
@@ -9,14 +11,25 @@
     \label{fig:PRISMA-flowchart}
 \end{figure}
 
+% While the field is far from mature, 289 (?) unique results in the preliminary search means it is evolved enough for a systematic literature review
+
+% Compare primary vs secondary studies
+
+% Mention non-peer-reviewed papers included in the review, and why they were included
+
 % Cite studies that might appear to meet the inclusion criteria, but which were excluded, and explain why they were excluded.
+
 
 % \subsection{Goals for responsible AI}
 % Have I discovered any goals for responsible AI? What do the reviewed papers say?
 %   See table 1 of Barredo Arrieta et al.
 
+\subsection{Key concepts}
+\import{Sections/}{35 Definitions}
+
 
 \subsection{RQ1 -- Principles for responsible AI}
+\label{sec:results-rq1}
 % Start by defining responsible AI
 
 % Perhaps a (large) table, summarizing the principles from each paper? I.e.
@@ -30,11 +43,50 @@
 %    Fairness       |   Lack of bias    |   Berg (2021), ...
 %    ...
 
+% The principles of the reviewed papers largely belongs to one of three clusters, depending on whether they are based on \textcite{Fjeld_2020}, \textcite{Floridi_2018} or \textcite{Jobin_2019}
+\begin{table}[htp]
+    \centering
+    \begin{tabular}{lp{0.5\textwidth}p{0.3\textwidth}}
+        \textbf{Principle} & \textbf{Explanation} & \textbf{Used by} \\
+        \midrule
+        Accountability & The ability to explain and justify decisions to stakeholders & \textcite{Dignum_2021,Cheng_2021,Mikalef_2022,Anagnostou_2022} \\
+        Explainability & Description of explainability, based on some sources & \textcite{BarredoArrieta_2020} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Overview of each principle}
+    \label{tab:my_label}
+\end{table}
+
+Alternative:
+\begin{table}[htp]
+    \centering
+    \begin{tabular}{ccccc}
+        & Accountability & Transparency & Non-maleficence & ... \\
+     \midrule
+        \textcite{Anagnostou_2022} & Accountability & Transparency & & Fairness \\
+        \textcite{BarredoArrieta_2020} & Accountability & Explainability & & \\
+        \textcite{Borda_2022} & &  Explicability & Non-maleficence & Justice \\
+        ...
+    \end{tabular}
+    \caption{Overview of each paper's principles}
+    \label{tab:my_label}
+\end{table}
+
+\subsubsection{Accountability}
+...
+
+\subsubsection{Transparency}
+...
+  
 % Then explanation of each principle, citing what the different sources have said, summarizing and possibly defining the principle in the context of RAI
 % Include how the principles build upon each other / connections between principles
 %   - I.e., how explainability is needed for the other principles to be applied
+% Include also ways to enable the different principles, i.e. column "How to enable principles"
 
 % Finally, discuss principles used by sources but not included here, as well as the reason why it was not included
+
+% Possibly include some generic "How to enable principles" advice that apply to multiple principles
+%   - E.g. data provenance (Werder K., Ramesh B., Zhang R.S.)
 
 \subsection{RQ2 -- Antecedents for responsible AI}
 
@@ -43,6 +95,7 @@
 
 % Outside of academia... (see Snowballing sources)
 
+
 \subsection{Alternative terms for responsible AI}
 \label{sec:results-alernative-terms}
 % A comparison of the different terms for responsible AI I have seen throughout the review, and how they compare to each other.
@@ -50,8 +103,10 @@
 % Possibly a comparison of SCOPUS hits for the given terms, to show their popularity in comparison to each other
 
 % \subsection{Challenges with responsible AI}
-% \subsection{Criticisms of responsible AI}
+\subsection{Criticisms of responsible AI}
+\label{sec:results-criticism}
 % What challenges / barriers have the review shown?
 % I.e., lack of implementation guides / most guidelines are very general and vague (maybe a "how to implement RAI" subsection?)
+%   - Are also found in general ethics: https://www.scopus.com/record/display.uri?eid=2-s2.0-0025411067&origin=resultslist&sort=cp-f&src=s&st1=autonomy+AND+beneficence+AND+justice&nlo=&nlr=&nls=&sid=4734d518162d88ad8f175bc2a82e4e4f&sot=b&sdt=b&sl=41&s=ALL%28autonomy+AND+beneficence+AND+justice%29&relpos=9&citeCnt=324&searchTerm=
 % "Ethics washing"
 % Lack of quantitative research

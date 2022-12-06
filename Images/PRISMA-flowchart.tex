@@ -1,7 +1,7 @@
 % Adapted from https://tex.stackexchange.com/a/263761
 
 \begin{tikzpicture}[
-    node distance=15mm and 10mm, % Height and width
+    node distance=15mm and 10mm, % Height and width 
     start chain=going below,
  mynode/.style = {
         draw, rectangle, align=center, text width=4cm,
@@ -22,17 +22,17 @@ every join/.style = arrow,
 \node (n1a) [mynode, left=of tc]    {206 records from Scopus};
 \node (n1b) [mynode,right=of tc]    {191 records from Web of Science};
     % the chain in the center
-\node (n2)  [mynode, below=of tc]   {(1) 397 records in total};
-\node (n3)  [mynode,join]   {289 titles screened};
-\node (n4)  [mynode,join]   {217 abstracts screened};
-\node (n5)  [mynode,join]   {57 full-text documents accessed for eligibility};
-\node (n6)  [mynode,join,yshift=-7.5mm]   {\# documents included in literature review};
+\node (n2)  [mynode, below=of tc]   {(1) \textbf{397} records in total};
+\node (n3)  [mynode,join]   {\textbf{289} titles screened};
+\node (n4)  [mynode,join]   {\textbf{217} abstracts screened};
+\node (n5)  [mynode,join]   {\textbf{57} full-text documents accessed for eligibility};
+\node (n6)  [mynode,join,yshift=-7.5mm]   {\textbf{54} documents included in literature review};
 % the branches to the right
 \node (n2r) [mynode,right=of n2]    {(2) 108 \mbox{duplicates} removed};
 \node (n3r) [mynode,right=of n3]    {(3) 72 records excluded};
 \node (n4r) [mynode,right=of n4]    {(4a) 58 records \mbox{excluded} in round one \\ (4b) 102 records \mbox{excluded} in round two};
-\node (n5r) [mynode,right=of n5]    {(5) \# full-text \mbox{documents} excluded};
-\node (sb) [mynode,below=of n5r,yshift=10mm]    {(6) \# documents from snowballing};
+\node (n5r) [mynode,right=of n5]    {(5) 20 full-text \mbox{documents} excluded};
+\node (sb) [mynode,below=of n5r,yshift=10mm]    {(6) 17 documents from snowballing};
 % lines not included in join                                        
 \draw[arrow] ([xshift=+22mm] n1a.south) coordinate (a)
                                        -- (a |- n2.north);

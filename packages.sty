@@ -2,8 +2,8 @@
 
 %%% OWN STUFF %%%
 % % Setup 1.5 spacing (as required by some NTNU theses)
-% \usepackage{setspace}
-% \onehalfspacing
+\usepackage{setspace}
+\onehalfspacing
 
 % See below for more own-stuff which requires other packages installed in-between
 
@@ -67,7 +67,8 @@
             style = authoryear-comp,    % Close to the 'Harvard' referencing style
             urldate = short,     % Long: 24th Mar. 1997 | Short: 24/03/1997
             maxcitenames = 2,   % Number of authors in cite before replaced with 'Author#1 et al.'
-            defernumbers=true
+            defernumbers=true,
+            dashed=false,
             ]{biblatex}
 
 \usepackage{caption}        % Enables controlling the look and feel of captions, see package documentation
@@ -170,6 +171,7 @@
 \addbibresource{References/review.bib}      % Add results from review
 \addbibresource{References/method.bib}      % Add references for method
 \addbibresource{References/definitions.bib} % Add references for definitions
+\addbibresource{References/results.bib}      % Add references for method
 \addbibresource{References/further work.bib}  % Add references for further work
 \addbibresource{References/other.bib}       % Add other references
 
