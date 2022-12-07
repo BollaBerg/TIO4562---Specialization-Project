@@ -27,6 +27,21 @@
 
 % Nicer tables
 \usepackage{booktabs}
+% Longer tables
+\usepackage{longtable}
+% Enable left-adjusted (not box-adjusted) columns
+% From https://latex.org/forum/viewtopic.php?t=32450
+\usepackage{ragged2e}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\RaggedRight}p{#1}}
+% Enable table notes
+% From https://tex.stackexchange.com/a/209851
+\usepackage{threeparttablex}
+
+% Enable horizontal pages
+\usepackage{pdflscape}
+% Use this for printing:
+% \usepackage{lscape}
 
 % Enable text color (for notes to Nhien)
 \usepackage{xcolor}
@@ -69,6 +84,7 @@
             maxcitenames = 2,   % Number of authors in cite before replaced with 'Author#1 et al.'
             defernumbers=true,
             dashed=false,
+            date=year
             ]{biblatex}
 
 \usepackage{caption}        % Enables controlling the look and feel of captions, see package documentation
