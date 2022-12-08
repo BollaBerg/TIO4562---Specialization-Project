@@ -1,15 +1,15 @@
 % Adapted from https://tex.stackexchange.com/a/263761
 
 \begin{tikzpicture}[
-    node distance=15mm and 10mm, % Height and width 
+    node distance=15mm and 8mm, % Height and width 
     start chain=going below,
  mynode/.style = {
         draw, rectangle, align=center, text width=4cm,
-        font=\small, inner sep=3ex, outer sep=0pt,
+        font=\small, inner xsep=2ex, inner ysep=3ex,
         on chain},
 mylabel/.style = {
         draw, rectangle, align=center, rounded corners, 
-        font=\small\bfseries, inner sep=1ex, outer sep=0pt,
+        font=\small\bfseries, inner sep=1ex,
         fill=cyan!30, minimum height=32mm,
         on chain},
 every join/.style = arrow,

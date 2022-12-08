@@ -1,0 +1,75 @@
+\begin{tikzpicture}[
+    node distance=7.1mm and 5mm, % Height and width 
+    start chain=going right,
+ mynode/.style = {
+        draw, rectangle, align=flush center, text width=1.8cm, minimum height=2cm, rounded corners,
+        font=\footnotesize, inner sep=1mm,
+        on chain},
+ substep/.style = {dotted},
+ narrow/.style = {text width=1.5cm},
+ wide/.style = {text width=2.6cm},
+ myinput/.style = {
+        draw, rectangle, align=flush center, text width=2cm,
+        font=\scriptsize, inner sep=1mm, rounded corners, minimum height=1cm,
+        on chain, densely dashdotted},
+ yflush/.style = {yshift=-7mm},
+every join/.style = arrow,
+     arrow/.style = {very thick,-stealth},
+     reviewarrow/.style = {arrow, rounded corners, loosely dotted},
+                    ]
+% To adjust inner sep and stuff:
+% https://latexdraw.com/how-the-inner-separation-for-nodes-works-and-how-to-use-it-part-2/
+
+% Consider separating:
+% Project planning (E)
+% Before development starts (P + PP + N)
+% At development start (I)
+% During development (S)
+
+% Main nodes
+% Opacity: https://tex.stackexchange.com/a/39039
+% Dotted:  https://tex.stackexchange.com/a/45276
+\node (E)  [mynode, substep, narrow]        {Existence};
+\node (P)  [mynode,join]                    {Principles};
+\node (PP) [mynode,join, substep]           {Prioritized\\Principles};
+\node (N)  [mynode,join]                    {Norms};
+\node (I)  [mynode,join, wide]              {Implementations};
+\node (S)  [mynode,join, narrow]            {Sustain};
+
+% Inputs to each box
+\node (P1) [myinput, above=of P] {Stakeholder\\values};
+\node (P3) [myinput, above=of P1, yflush] {Business\\principles};
+\node (P2) [myinput, above=of P3, yflush] {Laws and\\Regulation};
+
+\node (PP1) [myinput, above=of PP] {Stakeholder\\prioritization};
+\node (PP2) [myinput, above=of PP1, yflush] {Internal\\prioritization};
+
+\node (N1) [myinput, above=of N] {Stakeholder\\concretizations};
+\node (N2) [myinput, above=of N1, yflush] {Team\\concretizations};
+\node (N3) [myinput, above=of N2, yflush] {Expert\\concretizations};
+
+\node (I1) [myinput, above=of I, wide] {Team\\implementations};
+\node (I2) [myinput, above=of I1, yflush, wide] {Expert\\implementations};
+\node (I2) [myinput, above=of I2, yflush, wide] {Laws and\\Regulation};
+
+% Arrows
+\draw[arrow] (P1) -- (P);
+\draw[arrow] (PP1) -- (PP);
+\draw[arrow] (N1) -- (N);
+\draw[arrow] (I1) -- (I);
+
+% Cornered arrows (review)
+% https://tex.stackexchange.com/a/346057
+% https://stackoverflow.com/a/31214285
+
+% Multiple review-texts
+\draw[reviewarrow] (S.south) -- +(0,-0.6) -| node[pos=0.35, font=\scriptsize, above] {Review} (I.south);
+\draw[reviewarrow] (S.south) -- +(0,-1.05) -| node[pos=0.41, font=\scriptsize, above] {Review} (N.south);
+\draw[reviewarrow] (S.south) -- +(0,-1.5) -| node[pos=0.45, font=\scriptsize, above] {Review} (P.south);
+
+% One review-text
+% \draw[reviewarrow] (S.south) -- node[font=\scriptsize, right, anchor=north west] {\rotatebox{270}{Review}} +(0,-0.5) -|  (I.south);
+% \draw[reviewarrow] (S.south) -- +(0,-1) -|  (N.south);
+% \draw[reviewarrow] (S.south) -- +(0,-1.5) -|  (P.south);
+
+\end{tikzpicture}
