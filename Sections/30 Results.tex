@@ -1,7 +1,7 @@
 \section{Findings}
 \label{sec:Results}
-% \subsection{Descriptive Results} % See Lukkien et al.
-\todo[inline]{Descriptive results - number of papers per stage, results from methodology. Include any relevant observations -- distribution of methodology (reviews vs primary (qualitative / quantitative) studies). Consider including an overview of each paper with its context and methodology (and possibly more?)}
+The systematic search was conducted on October 4, 2022. An overview of the literature review, including each step of the process, is shown in \autoref{fig:PRISMA-flowchart}.
+
 
 % Number of papers per stage, results from the methodology
 \begin{figure}[p]
@@ -11,9 +11,147 @@
     \label{fig:PRISMA-flowchart}
 \end{figure}
 
-% While the field is far from mature, 289 (?) unique results in the preliminary search means it is evolved enough for a systematic literature review
+
+\subsection{Descriptive Results} % See Lukkien et al.
+As shown in \autoref{fig:PRISMA-flowchart}, a total of 289 unique titles were assessed during the literature review. After filtering on titles, abstracts, and the full text, and after adding sources from snowballing, 54 documents were included in the review. An overview of the reviewed papers can be seen in \autoref{tab:paper-overview} (\autoref{app:overview}).
+
+\autoref{tab:summary-year} shows the yearly distribution of the assessed papers, for each step of the literature review. The oldest of the assessed papers was published in 2015, with the majority of publications happening in 2019-2022 ($n = 279$, 97\%). The same distribution is reflected in the reviewed papers, where the oldest paper was published in 2017, and 93\% of the papers ($n = 50$) were published between 2019-2022. This indicates a young field of science, that has just recently gained traction. Although the field is still young, discussions with my supervisor led to the conclusion that 289 unique results in the preliminary search means the field has been explored enough to conduct a systematic literature review.
+
+\todo[inline]{Check that the final paper is included in yearly distribution.}
+
+\begin{table}[!ht]
+    \centering
+    \caption{Yearly distribution of the assessed papers.}
+    \label{tab:summary-year}
+    \begin{threeparttable}
+    \begin{tabular}{lcccc}
+    \toprule
+        \multirow{2}{*}{\textbf{Year}}
+            & \multirow{2}{*}{\textbf{Raw data}}
+            & \multirow{2}{*}{\shortstack{\textbf{After title}\\\textbf{filtering}}}
+            & \multirow{2}{*}{\shortstack{\textbf{After abstract}\\\textbf{filtering}}}
+            & \multirow{2}{*}{\textbf{Review}} \\ \\
+    \midrule
+        \textbf{2015} & 1 & 0 & 0 & 0 \\ 
+        \textbf{2016} & 1 & 0 & 0 & 0 \\ 
+        \textbf{2017} & 0 & 0 & 0 & 1 \\ 
+        \textbf{2018} & 2 & 2 & 1 & 3 \\ 
+        \textbf{2019} & 16 & 14 & 3 & 8 \\ 
+        \textbf{2020} & 45 & 34 & 9 & 10 \\ 
+        \textbf{2021} & 113 & 80 & 24 & 16 \\ 
+        \textbf{2022} & 105 & 83 & 20 & 15 \\ 
+        \textbf{2023} & 1 & 1 & 0 & 0 \\ 
+        \textbf{No year}\tnote{*} & 5 & 3 & 0 & 0 \\ 
+    \midrule
+        \textbf{Total} & \textbf{289} & \textbf{217} & \textbf{57} & \textbf{53} \\ 
+    \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \footnotesize
+        \item [*] No year provided in the databases.
+    \end{tablenotes}
+\end{threeparttable}
+\end{table}
 
 % Compare primary vs secondary studies
+While the field is relatively young, the methodology used by researchers within the field, as shown in \autoref{tab:summary-methodology}, indicates a certain level of maturity. \textcite[p. 930]{Keathley-Herring_2016} states that \textquote{a research area should evolve from an exploratory beginning to conceptual frameworks being proposed and tested, and then to industry exposure and finally, a convergence on best practices and consistent terminology.} The papers included in the review employ a wide range of methodologies, of both an exploratory (reviews, expert discussions), conceptual (conceptual frameworks, viewpoints) and evaluative (qualitative interviews, quantitative surveys, case studies) nature. Some authors (e.g., \cite{Fjeld_2020,Jobin_2019}) have noted a convergence within the proposed principles as well, indicating that the field is approaching an agreed-upon set of best practices.
+
+The fact that the research being done shows a high level of maturity while the actual field is young may be due to the connections between responsible AI and more established fields within AI- and software ethics. These connections are further explored in \autoref{sec:results-alernative-terms}.
+
+\begin{table}[ht]
+    \centering
+    \caption{Methodologies used in the reviewed papers.}
+    \label{tab:summary-methodology}
+    \begin{threeparttable}
+    \begin{tabular}{p{0.4\linewidth}cc}
+    \toprule
+        \textbf{Methodology} & \textbf{Count} & \textbf{Percentage}\tnote{*} \\
+    \midrule
+        Review of guidelines    & 9     & 17  \\
+        Literature review       & 9     & 17  \\
+        Qualitative interviews  & 9     & 17  \\
+        Conceptual              & 7     & 13  \\
+        Unknown                 & 5     & 9   \\
+        Quantitative survey     & 5     & 9   \\
+        Viewpoint               & 4     & 7   \\
+        Case study              & 4     & 7   \\
+        Expert discussion       & 3     & 6   \\
+        Review of AI strategies & 2     & 4   \\
+        Review of laws          & 1     & 2   \\
+    \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \footnotesize
+        \item [*] Percentage of reviewed papers that use the methodology. Note that some papers use more than one methodology, so the percentages do not add up to 100.
+    \end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\autoref{tab:summary-context} shows the geographical context of the reviewed papers. Over half the papers are created without a given context. This is relatively natural, as conceptual papers, viewpoints and literature reviews are rarely limited to geographical locations. All the reviewed papers are written in English, and the included literature reviews are also predominantly reviews of English papers. This creates a possibility for a Western bias, even in papers that appear to be written without a specific context.
+
+For the rest of the papers, most are focused on a Western context ($n = 11$), with some work being done in China ($n = 2$), India ($n = 2$) and South Africa ($n = 1$). This geographical bias is reflected in the distribution of guideline documents that are available.
+\todo{Possibly move this to discussion?}
+\textcite{AlgorithmWatch} contains a set of 167 guidelines for developing responsible AI. While this is by no means an exhaustive list, the database has been in use since 2019 and is open for submissions \parencite{AlgorithmWatch_about}, making it a reliable source. Of the 167 guidelines in the database, only 14 (8\%) are from Asian countries, 1 (0.6\%) from Southern Africa and no guidelines come from South America or Northern Africa.
+
+\begin{table}[htpb]
+    \centering
+    \caption{Geographical context of the reviewed papers.}
+    \label{tab:summary-context}
+    \begin{threeparttable}
+    \begin{tabular}{p{0.4\linewidth}cc}
+    \toprule
+        \textbf{Location} & \textbf{Count} & \textbf{Percentage}\tnote{*} \\
+    \midrule
+        Europe                          & 8     & 15 \\ 
+        Global                          & 6     & 11 \\ 
+        The US                          & 2     & 4 \\
+        China                           & 2     & 4 \\ 
+        India                           & 2     & 4 \\ 
+        Western countries in general    & 1     & 2 \\ 
+        South Africa                    & 1     & 2 \\
+        N/A\tnote{\textdagger}          & 31    & 57 \\ 
+    \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \footnotesize
+        \item [*] Percentage of reviewed papers that focuses on the given location.
+        \item [\textdagger] No context given. Includes viewpoints, conceptual papers, etc.
+    \end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+As with geographical context, most of the reviewed papers are written without a specific domain in mind. This is, once again, natural for conceptual papers, viewpoints and literature reviews, of which there are many among the reviewed papers. The rest of the papers are primarily focused on healthcare ($n = 7$). Healthcare is a domain with a wide use of technological solutions (e.g. \cite{Azaria_2016,Martinez_2008,Son_2014}), including AI-based solutions (e.g. \cite{Singh_2023,Kumar_2023}). As health records are digitized \parencite{Rajkomar_2018}, yet more avenues for adopting AI opens up, with estimates valuing the data of NHS patients in the UK at around 10 billion GBP per year \parencite{Downey_2019}. At the same time, healthcare uses large amounts of personal data, thus increasing the sensitivity patients feel when interacting with systems, automatic or not \parencite{Gupta_2021}. Professionals in the field of healthcare are therefore used to ethical principles and guidelines, such as the Hippocratic Oath \parencite{Wiesing_2020}, and calls have been made to use medical ethics as a starting point for responsible AI guidelines \parencite{DaltonBrown_2020, Siala_2022}.
+
+Outside of healthcare, papers tend to look at laws and governance ($n = 3$) and AI developers ($n = 3$). Both these cases are natural focus areas for responsible AI. As will be discussed in \autoref{sec:results-rq2:antecedents}, the primary antecedent for responsible AI is existing laws and regulations, with national AI strategies also working to push AI systems towards responsibility. Therefore, focusing on how laws and governance impacts -- and should impact -- the field of responsible AI is important, in order to ensure laws and strategies provide the best possible protection of laypersons, while limiting innovation as little as possible. In a similar fashion, the connection between responsible AI and AI developers is natural. Developers are those who actually design, create and maintain AI systems in use, and are therefore a natural source for understanding current practices in the industry, as well as which principles can be adopted, and how they should be adopted, in order to have the largest impact on moving AI in a responsible direction. A complete overview of the domains used in the reviewed papers can be seen in \autoref{tab:summary-domain}.
+
+\begin{table}[htpb]
+    \centering
+    \caption{Domains of the reviewed papers.}
+    \label{tab:summary-domain}
+    \begin{threeparttable}
+    \begin{tabular}{p{0.4\linewidth}cc}
+    \toprule
+        \textbf{Domain} & \textbf{Count} & \textbf{Percentage}\tnote{*} \\
+    \midrule
+        Healthcare              & 7     & 13 \\ 
+        Laws and governance     & 3     & 6 \\
+        Developers              & 3     & 6 \\
+        Labor                   & 1     & 2 \\
+        Education               & 1     & 2 \\
+        Finance                 & 1     & 2 \\
+        Water                   & 1     & 2 \\
+        Multi-sector            & 1     & 2 \\
+        N/A\tnote{\textdagger}  & 35    & 65 \\ 
+    \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \footnotesize
+        \item [*] Percentage of reviewed papers that focuses on the given domain.
+        \item [\textdagger] No domain given. Includes viewpoints, conceptual papers, etc.
+    \end{tablenotes}
+\end{threeparttable}
+\end{table}
+
 
 % Mention non-peer-reviewed papers included in the review, and why they were included
 
@@ -88,8 +226,10 @@
 %   - E.g. data provenance (Werder K., Ramesh B., Zhang R.S.)
 
 \subsection{RQ2 -- Antecedents for responsible AI}
+\label{sec:results-rq2:antecedents}
 
 \subsection{RQ3 -- Business advantages of responsible AI}
+\label{sec:results-rq3:advantages}
 % Academic stuff
 
 % Outside of academia... (see Snowballing sources)

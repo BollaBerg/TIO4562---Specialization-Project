@@ -45,6 +45,7 @@ A flowchart of this process, as well as the number of papers included in each st
 
 
 \subsection{Pilot study}
+\todo[inline]{Mention that this was used as a scoping study, to }
 The aim of the pilot study was to get an overview of the subject and terms used within the field of responsible AI, as well as to get familiar with, and test, the process of systematic literature reviews. 
 
 Two databases, Scopus and Web of Science, were searched for documents related to responsible artificial intelligence and other connected terms, as well as business. The results were screened using the steps mentioned in \autoref{sec:method-steps}. The complete search strings used can be seen in Appendix \ref{app:search-terms-pilot}.
@@ -56,9 +57,13 @@ The result of the pilot study was a better understanding of the field of respons
 
 \begin{table}[htp]
     \centering
+    \caption{Eligibility criteria used for the pilot study.}
+    \label{tab:criteria-pilot}
+    \begin{threeparttable}
     \begin{tabular}{cp{0.9\textwidth}}
+    \toprule
         \textbf{\#} & \textbf{Criteria} \\
-        \toprule
+    \midrule
         1 & \textbf{Include} documents focusing on defining responsible AI or guidelines for responsible AI development. \\
         2 & \textbf{Include} documents discussing antecedents for responsibility of AI systems. \\
         3 & \textbf{Include} documents focusing on business advantages of Responsible AI systems. \\
@@ -67,11 +72,15 @@ The result of the pilot study was a better understanding of the field of respons
         5 & \textbf{Exclude} documents focusing on general (non-responsible) AI. \\
         6 & \textbf{Exclude} documents focusing on specific, concrete implementations of AI. \\
         \midrule
-        7 & \textbf{Include} documents discussing the future of AI. \\
-        8 & \textbf{Include} documents discussing ethical AI, ethics in AI or AI governance. \\
+        7\tnote{*} & \textbf{Include} documents discussing the future of AI. \\
+        8\tnote{*} & \textbf{Include} documents discussing ethical AI, ethics in AI or AI governance. \\
+    \bottomrule
     \end{tabular}
-    \caption[Inclusion/exclusion criteria used for the pilot study]{Inclusion/exclusion criteria used for the pilot study. Note that criteria 7 and 8 were only used for screening titles.}
-    \label{tab:criteria-pilot}
+    \begin{tablenotes}
+        \footnotesize
+        \item [*] Only used for screening titles.
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
 
 
@@ -84,9 +93,13 @@ The aim of the main study was to answer the research questions posed in \autoref
 
 \begin{table}[htp]
     \centering
+    \caption{Eligibility criteria used for the main study.}
+    \label{tab:criteria-main}
+    \begin{threeparttable}
     \begin{tabular}{cp{0.9\textwidth}}
+    \toprule
         \textbf{\#} & \textbf{Criteria} \\
-        \toprule
+    \midrule
         1 & \textbf{Include} documents introducing responsible guidelines or general frameworks for responsible AI. \\
         2 & \textbf{Include} documents focusing on defining responsible AI. \\
         3 & \textbf{Include} analyses of existing, general frameworks for responsible AI. \\
@@ -98,8 +111,12 @@ The aim of the main study was to answer the research questions posed in \autoref
         8 & \textbf{Exclude} documents focusing on general (non-responsible) AI. \\ % (i.e., “Challenges in Machine Learning Application Development: An Industrial Experience Report”)
         9 & \textbf{Exclude} documents focused on implementations of AI on specific cases. \\ % (i.e., “Slangvolution: A Causal Analysis of Semantic Change and Frequency Dynamics in Slang”, “Explainable artificial intelligence (XAI): closing the gap between image analysis and navigation in complex invasive diagnostic procedures”, “Privacy-preserving AI-enabled video surveillance for social distancing: responsible design and deployment for public spaces”)
         \midrule
-        10 & \textbf{Include} documents discussing ethical AI, ethics in AI or AI governance. \\
+        10\tnote{*} & \textbf{Include} documents discussing ethical AI, ethics in AI or AI governance. \\
+    \bottomrule
     \end{tabular}
-    \caption[Inclusion/exclusion criteria used for the main study]{Inclusion/exclusion criteria used for the main study. Note that criteria 10 was only used for screening titles.}
-    \label{tab:criteria-main}
+    \begin{tablenotes}
+        \footnotesize
+        \item [*] Only used for screening titles.
+    \end{tablenotes}
+\end{threeparttable}
 \end{table}
