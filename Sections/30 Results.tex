@@ -195,64 +195,92 @@ Of the 54 reviewed papers, 48 (89\%) present or use a set of principles to creat
 After clustering the principles, some changes were made to the categories proposed by \textcite{Ryan_2021}. Clusters with fewer than five mentions among the reviewed texts were removed, and their principles moved to other clusters. This meant that \textit{Dignity} ($n = 3$) was moved to be part of \textit{Non-maleficence}, and \textit{Solidarity} ($n = 1$) became part of \textit{Justice and fairness}. As dignity can be considered to be a harm, and thus can be avoided by ensuring AI systems can do no harm, and as solidarity can be created by ensuring systems act in a fair and just manner, this change felt like a natural decision. Then, some categories were renamed -- \textit{Justice and fairness}, and \textit{Freedom and autonomy} were simplified to \textit{Justice} and \textit{Autonomy}, respectively. This was done to better aligned with common usage throughout the reviewed papers (e.g., \cite{Balagué_2021,Floridi_2018}, and the papers basing their principles on these). 
 
 % Discuss split of principles (core and non-core)
-Finally, after clusters had been created, these were again divided into two sets -- \emph{core} and \emph{instrumental} principles. This division was argued by \textcite{Canca_2020}, in order to separate core principles, that are \textquote{intrinsically valuable} (p. 19) from instrumental principles, \textquote{whose values are derived from their instrumental effect in protecting and promoting intrinsic values} (p. 20), in order to align principles for AI ethics, and thus responsible AI, with a \textquote{widely utilized set of core principles in applied ethics} (p. 19).
+After clusters had been created, these were again divided into two sets -- \emph{core} and \emph{instrumental} principles. This division was argued by \textcite{Canca_2020}, in order to separate core principles, that are \textquote{intrinsically valuable} (p. 19), from instrumental principles, \textquote{whose values are derived from their instrumental effect in protecting and promoting intrinsic values} (p. 20). The motivation for this was to align principles of AI ethics with a \textquote{widely utilized set of core principles in applied ethics} \parencite[p. 19]{Canca_2020}.
 
 One key change was done to the division suggested by \textcite{Canca_2020}. \textit{Beneficence}, as suggested by \textcite{Canca_2020} to encapsulate both \textquote{avoiding
-harm} and \textquote{doing good} (p. 19), was split into \textit{Beneficence} (doing good) and \textit{Non-maleficence} (avoiding harm). This has three benefits. First, it brings the division in line with the categories proposed by \textcite{Ryan_2021}, which are already used for the clustering mentioned above. Secondly, this aligns core principles of responsible AI with those currently used in applied ethics such as bioethics \parencite{Beauchamp_2001} and medicine \parencite{Gillon_2003,Gillon_1994}. Finally, this resonates with principles used by several of the reviewed papers (e.g., \cite{Balagué_2021,Floridi_2018,Jobin_2019,Nauck_2019}, and and the papers basing their principles on these), ensuring principles used within the field of responsible AI are placed in the group they belong.
+harm} and \textquote{doing good} (p. 19), was split into \textit{Beneficence} (doing good) and \textit{Non-maleficence} (avoiding harm). This has three benefits. First, it brings the division in line with the categories proposed by \textcite{Ryan_2021}, which are already used for the clustering mentioned above. Secondly, this aligns core principles of responsible AI with those used in other fields of applied ethics, such as bioethics \parencite{Beauchamp_2001} and medicine \parencite{Gillon_2003,Gillon_1994}. Finally, this resonates with principles used by several of the reviewed papers (e.g., \cite{Balagué_2021,Floridi_2018,Jobin_2019,Nauck_2019}), ensuring principles that are actually used within the field of responsible AI are placed in the group they belong.
+
 
 \subsubsection{Core principles}
-% Discuss core principles
-% Why are they core?
-% Why these principles?
-% Where, outside of responsible AI, has this divide been used?
+Core principles are described by \textcite{Canca_2020} as principles that \textquote{invoke those values that theories in moral and political philosophy argue to be intrinsically valuable, meaning their value is not derived from something else} (p. 19). She argues that core principles, then, should be present in every responsible AI system, and that they -- by themselves -- should be used to select the correct action for a given context, as the action that fulfills the core principles to the highest degree \parencite{Canca_2020}.
+
+As mentioned above, this paper adapts the core principles suggested by \textcite{Canca_2020} to be the following clusters of principles: \textit{Autonomy}, \textit{Beneficence}, \textit{Non-maleficence} and \textit{Justice}. A complete overview of the core principles used by the reviewed papers is shown in \autoref{tab:paper-principles-core} (\autoref{app:principles}).
+
+The notion that core principles should be present in every responsible AI system is somewhat reflected in the reviewed papers. Of the 48 papers that include a set of principles, 18 of them (38\%) include all four core principles. In comparison, only 6 (13\%) contain none of the core principles. Perhaps most importantly, most sets of principles created by reviewing existing guidelines for responsible AI contain all four (\cite{Clarke_2019,Floridi_2018,Jobin_2019,Ryan_2021}) or three (\cite{Fjeld_2020}) core principles. The only exceptions from this are \textcite{Brand_2022} and \textcite{Hagendorff_2020}, who only include one core principle each. \textcite{Brand_2022} is focused on developing a framework for responsible AI policy and regulation, and this may be explained by him primarily targeting more easily measureable principles, such as transparency and privacy. \textcite{Hagendorff_2020}, however, presents an interesting case. Although he only includes one of the core principles (\textit{Fairness}, which is included in \textit{Justice}) in his list of recurring principles, his overview \parencite[Table 1]{Hagendorff_2020} shows that both \textquote{common good} (\textit{Beneficence}), \textquote{human oversight} (\textit{Autonomy}) and \textquote{safety, cybersecurity} (\textit{Non-maleficence}) are commonly used among the guidelines he reviews. This indicates that core principles of responsible AI are extensively used in existing guidelines in the AI industry. 
 
 \paragraph{Autonomy}
+Autonomy can be defined as \textquote{the quality or state of being self-governing} and \textquote{self-directing freedom and especially moral independence} \parencite{dictionary_autonomy}. In relation to responsible AI, autonomy can be thought of as \textquote{the idea that individuals have a right to make decisions for themselves about the treatment they do or not receive} \parencite[p. 697-698]{Floridi_2018}. Following the categorization done by \textcite[Table 1]{Ryan_2021}, \textit{Autonomy} includes the sub-categories Freedom, Autonomy, Consent, Choice, Self-determination, Liberty, and Empowerment. Autonomy is included in 24 papers (50\% of all principle-including papers).
+
+\textcite[p. 5]{Rothenberger_2019} argue that \textquote{An AI should
+have a purpose,} and that this purpose should be to support, and not replace, humans. \textcite[p. 387]{Thelisson_2018}, \textcite[p. 102]{Lu_2022}. \textcite[p. 53]{Fjeld_2020} and \textcite[p. 416]{Clarke_2019} all stress that AI should stay under human control. Among the guidelines reviewed by \textcite[p. 11]{Jobin_2019}, autonomy is referred to as both a \textquote{positive freedom,} i.e., a freedom to do good things, which includes \textquote{the freedom to flourish, to self-determination through democratic means, the right to establish and develop relationships with other human beings, the freedom to withdraw consent, or the freedom to use a preferred platform or technology,} as well as a \textquote{negative freedom}, i.e., a freedom from bad things, such as \textquote{freedom from technological experimentation, manipulation or surveillance.} According to the guidelines reviewed by \textcite[p. 698]{Floridi_2018}, a key part of ensuring autonomy of humans is by limiting the autonomy of machines, ensuring that humans \textquote{retain the power to decide which decisions to take.} 
+
+The reviewed papers
+\todo{Should this be moved to discussion?}
+contain a wide set of methods to ensure human autonomy in responsible AI systems. First, responsible AI systems should be built to ensure the freedoms listed by \textcite{Jobin_2019} are not impacted. This means responsible AI systems should not be used for manipulation or surveillance, nor should it limit the freedoms of humans. Secondly, responsible AI systems should ensure people affected by their decisions have a way to \textquote{challenge the use or output of the system} \parencite[p. 102]{Lu_2022}, \textquote{request and receive human review of those decisions} \parencite[p. 53]{Fjeld_2020} and \textquote{to opt out of automated decision} \parencite[p. 54]{Fjeld_2020}. AI developers should ensure informed consent is given before data is collected from people \parencite{Lukkien_2021,Jobin_2019}, and implement methods for humans to take control and override the automatic system when necessary \parencite{Floridi_2018,Rakova_2021}. \textcite{Liu_2021} argue that AI systems should adapt to each user, ensuring each person gets the level of autonomy and assistance as they need. 
+
+Some of the reviewed papers (e.g., \cite{Brand_2022,Nevanperä_2021}) argue that responsible AI systems should have a \textquote{human in the loop.} This entails having a human involved in and responsible for the decisions made by the AI system, and comes with two benefits. First, a clear agency for the system is created, as the person is responsible even if decisions are automated \parencite{Nevanperä_2021}. Secondly, and perhaps more important, this lets a human \textquote{perform checks and/or investigate situations with considerable uncertainty} \parencite[p. 12]{vanBruxvoort_2021}. Manually handling unclear decisions means that the AI stays under human control, and limits autonomy no more than a fully manual system would.
+
 
 \paragraph{Beneficence}
+Beneficence is defined as \textquote{the quality or state of doing or producing good} \parencite{dictionary_beneficence}. This means that AI systems fulfilling the principle of beneficence should work towards the greater good, i.e., solutions that are good for humanity. According to \textcite{Ryan_2021}, \textit{Beneficence} include the sub-categories Benefits, Beneficence, Well-being, Peace, Social good, and Common good. Beneficence is included in 27 (56\%) of the papers.
+
+According to \textcite[p. 9]{vanBruxvoort_2021}, AI systems fulfilling the principle of \textit{Beneficence} should have the \textquote{well-being of humans, society and planet put upfront.} Beneficent AI systems are systems created to be beneficial for humanity \parencite{Floridi_2018}, promoting good \parencite{Jobin_2019} and increase societal well-being \parencite{Mikalef_2022}. \textcite[p. 103]{BarredoArrieta_2020} argue that responsible AI systems should \textquote{be aligned with the United Nation’s Sustainable Development Goals and contribute to them in a positive and tangible way.} In a similar fashion, \textcite[p. 2]{Buhmann_2021} highlight responsible AI's \textquote{responsibility to do good,} i.e., it should work towards \textquote{improvement of living conditions, such as in accordance with the sustainable development goals.} Responsible AI should \textquote{complement humans} \parencite[p. 419]{Clarke_2019}, and \textquote{be developed and used to increase prosperity for all,} thus advancing \textquote{inclusive growth and sustainable development} \parencite[p. 97534]{Rizinski_2022}.
+
+Several methods exist to ensure AI systems are beneficial. On an organizational level, \textcite[p. 2151]{Morley_2020} argue that AI systems should be justified, i.e., \textquote{the purpose for building the system must be clear and linked to a clear benefit.} To support this, organisations \textquote{should define as clear as possible what it views as beneficial to humans [\ldots], so that its view can guide decisions for all aspects} \parencite[p. 9]{vanBruxvoort_2021}. In other words, AI organisations should create an organisational definition of beneficence, which can be used in their AI development in the same way corporate visions and values can be used. Beneficence should be considered when deciding what problems to solve, and beneficial AI systems should work towards \textquote{solutions to some of the world’s greatest problems, such as curing diseases, ensuring food security and preventing environmental damage} \parencite[p. 73]{Ryan_2021}. Responsible AI organisations should work towards \textquote{minimizing power concentration,} \textquote{working more closely with ‘affected’ people,} and \textquote{minimizing conflicts of interests} \parencite[p. 11]{Jobin_2019}.
+
+Beneficial AI systems should include stakeholders in their decision making \parencite{Lu_2022,Havrda_2020,Morley_2020}, ensuring that everyone who are impacted by the system have a say. \textcite[p. 134]{Nevanperä_2021} argues that, due to the wide reach of AI systems, \textquote{all sentient beings ought to be considered as stakeholders.} In order to properly ensure systems are beneficial, they should include metrics that can be used as key performance indicators to evaluate the beneficence of the system \parencite{Eitel-Porter_2021}. These may, for example, be \textquote{metrics related to satisfaction with life, affect, psychological well-being, and inequality} \parencite[p. 5]{Havrda_2020}.
+
 
 \paragraph{Non-maleficence}
+Maleficence is defined as \textquote{the act of committing harm or evil,} leading non-maleficence to mean the avoidance of committing harm. \textcite[p. 697]{Floridi_2018} define non-maleficence simply as \textquote{do no harm.} Following \textcite{Ryan_2021}, \textit{Non-maleficence} includes the sub-categories Non-maleficence, Security, Safety, Harm, Protection, Precaution, Prevention, Integrity, and Non-subversion. Non-maleficence is the second most used core principle amongst the reviewed papers, with 32 papers (67\%) including the principle.
+
+\textcite[p. 6]{Doorn_2021} define non-maleficence as \textquote{an intention to avoid needless harm or injury,} and states that \textquote{it is often interpreted as the need to protect safety and security.} People creating and using non-maleficent AI systems should assess, control for and mitigate potentially harmful impacts \parencite[p. 2]{Buhmann_2021}, in both the short- and long term \parencite[p. 416]{Clarke_2019}. Non-maleficent systems should have \textquote{resistance to malfunctions (robustness) and recoverability when malfunctions occur (resilience)} \parencite[p. 416]{Clarke_2019}, and \textquote{ensure data security and AI safety} \parencite[p. 2]{Buhmann_2021}. \textcite[p. 13]{Anagnostou_2022} argue that non-maleficent AI systems should focus \textquote{not only security but also cybersecurity.} % Only got to Doorn, I am going to bed
+
+
+Much like with beneficence, multiple papers argue that stakeholder involvement is an important step towards achieving non-maleficent AI \parencite[p. 416]{Clarke_2019}
+
 
 \paragraph{Justice}
 
 
 \subsubsection{Instrumental principles}
-% Discuss a little about the variation of principles
-% Depends on time, domain and concrete project
+Whereas core principles are intrinsically valuable, instrumental principles provide value by supporting and facilitating for the core principles \parencite{Canca_2020}. Which instrumental principles to include when developing a responsible AI system is therefore up to the developers and designers of the system. As ethics is not absolute, the selection of instrumental principles may vary depending on, amongst others, the cultural context of the AI system \parencite{vanBruxvoort_2021}, the support system of the country the AI system is to be used in \parencite{Wright_2018}, or the ethnicity, gender, political leaning and background of afflicted stakeholders \parencite{Jakesch_2022}, and may even change over time \parencite{vanBruxvoort_2021}.
+
+Based on the clustering described above, the reviewed papers include the following categories of instrumental principles: \textit{Transparency}, \textit{Accountability}, \textit{Trust}, \textit{Sustainability}, \textit{Privacy} and \textit{Others}, where the latter encapsulates Data governance, Laws and regulations, Informed consent, Predictability, Quality benchmarking, Interventions and co-design, and System performance. A complete overview of the instrumental principles used by the reviewed papers is shown in \autoref{tab:paper-principles-instrumental} (\autoref{app:principles}).
+
+While this list encompasses instrumental principles used by the reviewed papers, it
+\todo{Maybe move this paragraph to discussion?} 
+is by no means an exhaustive list of potential principles designers of AI systems can use, nor is that the intention of this section. Instead, this section is meant to give an overview of some principles that are used by current literature on responsible AI, in order to show some methods to facilitate for the core principles -- the principles that actually make an AI system responsible -- mentioned above. While the principles mentioned here are relatively common, and can thus work as a starting point for selecting relevant instrumental principles for a new system, designers should ensure they are adapted to the system and context they operate in, and that relevant principles that are not mentioned here are also included in their projects.
 
 \paragraph{Transparency}
 % Both system-, process- and technical
+% Some (Floridi) include this with core
+% Jobin: Not principle per se, but rather an enabling condition
 
 \paragraph{Accountability}
-
-\paragraph{Privacy}
 
 \paragraph{Trust}
 
 \paragraph{Sustainability}
 
-\paragraph{Data governance}
+\paragraph{Privacy}
 
-\paragraph{Laws and regulations}
-
-\paragraph{Informed consent}
-
-\paragraph{Predictability}
-
-\paragraph{Quality benchmarking}
-
-\paragraph{Interventions and co-design}
-
-\paragraph{System performance}
+\paragraph{Others}
+% Data governance
+% Laws and regulations
+% Informed consent
+% Predictability
+% Quality benchmarking
+% Interventions and co-design
+% System performance
 
 
 
-% Then explanation of each principle, citing what the different sources have said, summarizing and possibly defining the principle in the context of RAI
 % Include how the principles build upon each other / connections between principles
 %   - I.e., how explainability is needed for the other principles to be applied
 % Include also ways to enable the different principles, i.e. column "How to enable principles"
 
-% Finally, discuss principles used by sources but not included here, as well as the reason why it was not included
-
+\subsubsection{How to enable responsible AI}
 % Possibly include some generic "How to enable principles" advice that apply to multiple principles
 %   - E.g. data provenance (Werder K., Ramesh B., Zhang R.S.)
 
