@@ -2,7 +2,7 @@
 \label{sec:Results}
 The systematic search was conducted on October 4, 2022. An overview of the literature review, including each step of the process, is shown in \autoref{fig:PRISMA-flowchart}.
 
-
+\todo[inline]{Move PRISMA to end of method, rather than results.}
 % Number of papers per stage, results from the methodology
 \begin{figure}[p]
     \centering
@@ -150,20 +150,55 @@ Outside of healthcare, papers tend to look at laws and governance ($n = 3$; 6\%)
 \end{threeparttable}
 \end{table}
 
+The reviewed papers come from a wide variety of sources, including journals from several different fields, books, and proceedings. An easy way to quickly assess the quality of a paper is by evaluating the rank of its journal or publisher \parencite{Keathley-Herring_2016}. In Norway, this is primarily done by the Norwegian Register for Scientific Journals, Series and Publishers, who uses a 3-level ranking system, with level 2 being the highest level, and 0 meaning that a journal was rejected from the register \parencite{kanalregisteret}. Using this register, \autoref{tab:summary-ranks} shows the ranks of the reviewed journals. No 0-ranked journals means that the papers can be considered good enough quality to use for a review.
+
+\begin{table}[htpb]
+    \centering
+    \caption{Journal ranks of the reviewed papers.}
+    \label{tab:summary-ranks}
+    \begin{threeparttable}
+    \begin{tabular}{p{0.4\linewidth}cc}
+    \toprule
+        \textbf{Journal rank} & \textbf{Count} & \textbf{Percentage}\tnote{*} \\
+    \midrule
+        2                       & 6     & 11    \\
+        1                       & 34    & 63    \\
+        0                       & 0     & 0     \\
+        N/A\tnote{\textdagger}  & 14    & 26    \\
+    \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \footnotesize
+        \item [*] Percentage of reviewed papers from a journal with the given rank.
+        \item [\textdagger] Journal rank not available. Includes books, proceeding papers and journals that have not been evaluated by the Norwegian Register.
+    \end{tablenotes}
+\end{threeparttable}
+\end{table}
 
 % Mention non-peer-reviewed papers included in the review, and why they were included
+Of the 54 papers used for this review, two are from sources that are not peer reviewed -- \textcite{Fjeld_2020} and \textcite{Floridi_2019}. Both these sources were gathered during snowballing, and are included for the same reason. \textcite{Fjeld_2020} compares 36 AI principles, and is considered \textquote{a landmark in the synthesis of AI ethics principles and guidance} \parencite[p. 2]{Bélisle-Pipon_2022}. Likewise, \textcite{Floridi_2019} reviewed six sets of principles, and supports the conclusions drawn by \textcite{Floridi_2018}. As the papers are central for the field, and referenced in multiple of the other papers, they were deemed relevant enough to be included in this review.
 
 % Cite studies that might appear to meet the inclusion criteria, but which were excluded, and explain why they were excluded.
+Some papers may appear to meet the inclusion criteria, but were still included. Examples of this include \textcite{ElHaddadeh_2021} and \textcite{Trocin_2021}. \textcite{ElHaddadeh_2021} presents an in-depth comparison of AI used for healthcare in the UK (NHS Test and Trace) and Quatar (EHTERAZ), looking at methods used for achieving responsibility in the two systems, and how well the systems performed at stopping the spread of COVID-19. Although the paper looks at ways AI can be used ethically, it neither defines responsible AI, contains or critizises a framework nor discusses antecedents or business advantages of responsible AI, and therefore does not answer the eligibility criteria. \textcite{Trocin_2021} performs a literature review aimed at ethical issues in healthcare, and how AI may help solve or mitigate these issues. While the topic of the article revolves around using AI ethically, its focus is primarily on ethical issues of healthcare, rather than ethical issues of AI, and the paper therefore does not answer the eligibility criteria. The rest of the papers rejected during full-text assessment (step 5, \autoref{sec:method-steps}) were rejected for similar reasons.
 
 
 \subsection{Key concepts}
+\todo[inline]{Remove own definitions, instead adopt from one of the reviewed papers (and defend it, argue why I am using that one)}
+\todo[inline]{Remove block quotes (except for the quotes I am using in this text, where I \textit{can} keep them)}
 \import{Sections/}{35 Definitions}
 
 
 \subsection{RQ1 -- Principles for responsible AI}
 \label{sec:results-rq1}
+Of the 54 reviewed papers, 48 (89\%) present or use a set of principles to create or describe responsible AI, for a total of 58 unique principles. Three steps are used to make this set of principles more manageable. First, principles were clustered following the categorization done by \textcite{Ryan_2021}. Their work reviewed existing guidelines, and came up with 11 categories, containing 61 subcategories, which most of the reviewed principles aligned with. The principles that did not align with any subcategory were categorized with the closest fit, with principles that did not align with any clusters being grouped as \textit{Others}. This ensured all principles would be used in the review, without creating multiple low-density clusters.
+
+After clustering the principles, some changes were made to the categories proposed by \textcite{Ryan_2021}. Clusters with fewer than five mentions among the reviewed texts were removed, and their principles moved to other clusters. This meant that \textit{Dignity} ($n = 3$) was moved to be part of \textit{Non-maleficence}, and \textit{Solidarity} ($n = 1$) became part of \textit{Justice and fairness}. As dignity can be considered to be a harm, and thus can be avoided by ensuring AI systems can do no harm, and as solidarity can be created by ensuring systems act in a fair and just manner, this change felt like a natural decision. Then, some categories were renamed -- \textit{Justice and fairness}, and \textit{Freedom and autonomy} were simplified to \textit{Justice} and \textit{Autonomy}, respectively. This was done to better aligned with common usage throughout the reviewed papers (e.g., \cite{Balagué_2021,Floridi_2018}, and the papers basing their principles on these). 
 
 % Discuss split of principles (core and non-core)
+Finally, after clusters had been created, these were again divided into two sets -- \emph{core} and \emph{instrumental} principles. This division was argued by \textcite{Canca_2020}, in order to separate core principles, that are \textquote{intrinsically valuable} (p. 19) from instrumental principles, \textquote{whose values are derived from their instrumental effect in protecting and promoting intrinsic values} (p. 20), in order to align principles for AI ethics, and thus responsible AI, with a \textquote{widely utilized set of core principles in applied ethics} (p. 19).
+
+One key change was done to the division suggested by \textcite{Canca_2020}. \textit{Beneficence}, as suggested by \textcite{Canca_2020} to encapsulate both \textquote{avoiding
+harm} and \textquote{doing good} (p. 19), was split into \textit{Beneficence} (doing good) and \textit{Non-maleficence} (avoiding harm). This has three benefits. First, it brings the division in line with the categories proposed by \textcite{Ryan_2021}, which are already used for the clustering mentioned above. Secondly, this aligns core principles of responsible AI with those currently used in applied ethics such as bioethics \parencite{Beauchamp_2001} and medicine \parencite{Gillon_2003,Gillon_1994}. Finally, this resonates with principles used by several of the reviewed papers (e.g., \cite{Balagué_2021,Floridi_2018,Jobin_2019,Nauck_2019}, and and the papers basing their principles on these), ensuring principles used within the field of responsible AI are placed in the group they belong.
 
 \subsubsection{Core principles}
 % Discuss core principles
@@ -185,9 +220,7 @@ Outside of healthcare, papers tend to look at laws and governance ($n = 3$; 6\%)
 % Depends on time, domain and concrete project
 
 \paragraph{Transparency}
-% Why is transparency and explainability separated?
-
-\paragraph{Explainability}
+% Both system-, process- and technical
 
 \paragraph{Accountability}
 
