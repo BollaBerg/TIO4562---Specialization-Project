@@ -1,15 +1,22 @@
 \section{Introduction}
 \label{sec:Introduction}
-% Comments represent thoughts about what should be included, and does not necessarily imply the order they should be included
+Artificial intelligence (AI) is everywhere. It is used to recommend products on Amazon, prevent abusive comments and messages on Facebook, and find interesting profiles on Twitter \parencite{Cooper_2022_intro}. AI helps users find the websites they are looking for when searching on Google \parencite{raghavan_2020_intro}, and the movies they want to watch on Netflix \parencite{netflix_intro}.
 
-% Something to show explosion of AI, how it is used everywhere and impact everyone
+Outside of the internet, AI is used in applications ranging from detecting faults in power supply networks and forecasting energy usage \parencite{Quest_2022_intro}, to predicting traffic \parencite{Sarker_2021_intro} and making tactical decisions in sport competitions \parencite{Ding_2019_intro}. AI has potential to make cars safer \parencite{Myers_2022_intro} and self-driving \parencite{bmw_intro}, save lives using drones \parencite{drones_intro}, and fly planes autonomously \parencite{airbus_intro}. In the domain of healthcare, AI is used for applications such as improving drug safety \parencite{Basile_2019_intro}, identifying diseases \parencite{Kermany_2018_intro} and cancer \parencite{Hosny_2018_intro} using images, battling pandemics such as COVID-19 \parencite{Vaishya_2020_intro}, and restoring movement to patients with quadriplegia (i.e., loss of function in limbs) \parencite{Jiang_2017_intro}. All this is done automatically, with minimal human intervention.
+
+% AI has been used in military applications, for everything from comparing battle tanks \parencite{Cheng_2002_intro} and deciding small-unit tactics \parencite{VanLent_2004_intro} to predicting terrorist attacks \parencite{Uddin_2020_intro} and create fully autonomous weapon systems \parencite{Horowitz_2019_intro}.
+
+
+% Economically, increase in possibilities
+This, naturally, has enormous potential. \textcite{pwc_value_intro} estimates that AI has potential to contribute 15.7 trillion USD by the year 2030, while \textcite{mckinsey_value_intro} place the potential impact at between 9.5 and 15.4 trillion USD annually. Organisations surveyed by \textcite{IBM_value_intro} report an average increase in revenue of 6.3 percentage points, directly caused by adopting AI technologies. The potential of AI is not only through economic results, however. By minimizing human intervention, AI technologies enable quick scaling of business processes, ensuring maximum efficiency is reached \parencite{Lardi_2021_intro}. At the same time, AI empowers individual employees, increasing their competence and job satisfaction \parencite{Ransbotham_2022_intro}. The autonomous and scalable nature of AI opens up a sea of new possibilities, such as detection of disease before any symptoms show up \parencite{Agrawal_2021_intro}.
+
+However, such an explosion in artificial intelligence comes with significant drawbacks. AI systems may discriminate against certain groups of individuals, place human lives at risk, or increase polarization of society \parencite{Mikalef_2022}. Additionally, systems like autonomous weapons may use AI for intentionally causing harm \parencite{Eitel-Porter_2021}. Several negative consequences of AI have already occurred. Amazon's AI system for recruitment, designed to automatically filter resumes sent to the company, was shut down after it was discovered that it greatly preferred male applicants \parencite{Amazon_case_intro}. An AI system used by US courts to predict recidivism, called "Correctional Offender Management Profiling for Alternative Sanctions" (COMPAS), falsely predicted a high risk for recidivism for black people almost twice as often as for white people \parencite{COMPAS_2016_intro}.  In a similar fashion, Google Photo's automatic picture-tagging algorithm, designed to simplify organizing pictures in the application, labeled a picture of two black people as "gorillas" \parencite{Google_case_intro}.
 
 % Why is responsible AI important for humanity?
+The risks of wrongful use of AI, as illustrated by these cases, show the importance of designing and developing AI in an ethically responsible way. While the debate of AI ethics has been ongoing almost since the term AI was first used (see e.g. \cite{Wiener_1960,Samuel_1960}), responsible AI is a recent term, used to describe AI systems developed with potential consequences for humanity in mind. Current work in the field of responsible AI largely revolves around creating sets of ethical principles to follow when developing systems, and little work has been done on ways to implement these principles in the actual systems and processes \parencite{BarredoArrieta_2020}.
 
-% Contributions
-
-% Comparison with other literature reviews in responsible AI, what do we contribute that they don't?
-% I.e., "Although some recent surveys [8,10,13–17] summarize the upsurge of activity in XAI across sectors and disciplines, this overview aims to" (Barredo Arrieta et al.)
+% AIM OF THE PAPER
+Based on this background, the aim of this paper is to create an understanding of how an AI system can be designed to be considered responsible. To make this process more understandable, this aim is broken into three separate research questions -- RQ1, RQ2, and RQ3 -- presented below.
 
 % Research questions
 \begin{table}[h]
@@ -23,6 +30,12 @@
     % \label{tab:reserach-questions}
 \end{table}
 
+% Contributions
+To achieve its goal, this paper conducts a systematic literature review of the academic field of responsible AI. The goal of this review is to summarize the standing of the field, creating a "snapshot" of the current state of research. This paper then uses the finding of this review to create a framework, designed to concretize and simplify the process from finding a set of principle suitable for a system and context, and converting these to actual implementations within the system.
+
+% Comparison with other literature reviews in responsible AI, what do we contribute that they don't?
+There have been some attempts at compiling the work done on responsible AI by reviewing academic literature on the subject. \textcite{Anagnostou_2022} conducts a literature review with the goal of finding common principles, and how they apply, for a specific set of industries. Similarly, \textcite{Lukkien_2021,Siala_2022} perform a literature reviews specifically focused on responsible AI in healthcare. The review conducted by \textcite{BarredoArrieta_2020} targets explainable AI, rather than responsible AI. In a similar fashion, the goal of \textcite{Morley_2020} is to discover technical tools for implementing responsible AI, while \textcite{Merhi_2022} aims to discover barriers preventing responsible AI from being created. Finally, \textcite{WangY_2020} aims to find the benefits of implementing responsible AI practices. As such, this paper presents novel knowledge, in that it is the first to conduct a systematic literature review of academic literature with the goal of discovering how AI systems can be made responsible from a non-technical perspective.
+
 % How the paper is structured
-%   - As definitions are largely based on the reviewed papers, these can be found in (results)
+This paper is structured as follows. \autoref{sec:background} discusses some background information that is relevant for understanding the rest of the paper, before \autoref{sec:Method} presents the methodology used for the review. The findings of the review are given in \autoref{sec:Results}. The section starts off with descriptive results, before some key concepts are defined in \autoref{sec:Definitions}. \autoref{sec:results-rq1}, \ref{sec:results-rq2:antecedents} and \ref{sec:results-rq3:advantages} aim to answer RQ1, RQ2 and RQ3, respectively. A discussion of the findings is presented in \autoref{sec:Discussion}, with \autoref{sec:framework} presenting the new framework. Finally, the paper wraps up with a conclusion in \autoref{sec:Conclusion}.
 
