@@ -2,21 +2,19 @@
 % Definitions (both from review and thought-up myself)
 Although theoretical and philosophical definitions fall slightly outside of the intended scope of this paper, it is necessary for a good understanding of responsible artificial intelligence to look at underlying terms and ensure clearly defined definitions related to the field. While many of the reviewed papers contain interesting and well-thought-out definitions, most of them wary significantly. There is thus a need to unify the definitions found in the field. To do so, this paper use the definitions found during the review, as well as some secondary material, to create classical definitions \parencite[p. 36]{Seppälä_2014} of the terms \textit{artificial intelligence}, \textit{artificial intelligence system} and \textit{responsible artificial intelligence}.
 
-% - Responsiblity (perhaps in Results?)
 
 \subsubsection{Artificial intelligence}
 \label{sec:definition-ai}
-Not all the reviewed papers define the term, and the definitions that are mentioned differ in both wording and inclusion. For instance, \textcite[p. 258]{Mikalef_2022} builds on \textcite{Mikalef_2021_notreview} and define AI as \textquote{the ability of a system to identify, interpret, make inferences, and learn from data to achieve predetermined organisational and societal goals,} thus adopting a definition removed from technology but based on learning. The notion of learning is repeated by \textcite[p. 2]{Dignum_2021}, who defines AI as \textquote{A (computational) technology that is able to infer patterns and possibly draw conclusions from data.} Her definition differs from that of \citeauthor{Mikalef_2022} in that she focuses on the technology, rather than the system, and she does not include the notion of the system's goals.
+Not all the reviewed papers define the term artificial intelligence, and the definitions that are used differ in both wording and inclusion. For instance, \textcite[p. 258]{Mikalef_2022} builds on \textcite{Mikalef_2021_notreview} and define AI as \textquote{the ability of a system to identify, interpret, make inferences, and learn from data to achieve predetermined organisational and societal goals,} thus adopting a definition removed from technology but based on learning. The notion of learning is repeated by \textcite[p. 2]{Dignum_2021}, who defines AI as \textquote{A (computational) technology that is able to infer patterns and possibly draw conclusions from data.} Her definition differs from that of \citeauthor{Mikalef_2022} in that she focuses on the technology, rather than the system, and she does not include the notion of the system's goals.
 
 Focusing strongly on the outcome and technological side of the technology, \textcite[p. 130-131]{Brand_2022} bases his definition on the Oxford dictionary definition of AI, defining it as \textquote{the theory and development of computer systems able to perform tasks normally requiring human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.} In a similar vein, \textcite[p. 1]{Havrda_2020} adopts the broad definition of AI given by \textcite{IEEE_vision} as \textquote{autonomous or intelligent software when installed into other software and/or hardware systems that are able to exercise independent reasoning, decision-making, intention forming, and motivating skills according to self-defined principles.}
 
-Finally, several of the included papers focus on an ability of simulating humans. \textcite[p. 3-4]{Liu_2021} defines AI as \textquote{A broad range of techniques and approaches of computer science to simulate human intelligence in machines that are programmed for thinking like humans and mimic human behaviours, capable of performing tasks.} Similarly, \textcite[p. 3]{vanBruxvoort_2021} adopt the definition given by \textcite{Shubhendu_2013}, and define AI as \textquote{the study of ideas to bring into being machines that respond to stimulation consistent with traditional responses from humans, given the human capacity for contemplation, judgment and intention. Each such machine should engage in critical appraisal and selection of differing opinions within itself.}
-
-As shown, there exists a wide range of definitions of AI. All of them lack certain characteristics, and thus this paper creates a new, at least compared to the reviewed papers, definition of AI. The notion of artificial intelligence is built on the idea of \textit{intelligence}, and that is thus a natural starting point for a new definition. \textcite{Legg_2007} presents a selection of definitions of intelligence, gathered from encyclopedias, psychologists and AI researchers. Combining these, they define intelligence as follows:
-\begin{displayquote}[{\cite[p. 9]{Legg_2007}}][.]
-    Intelligence measures an agent’s ability to achieve goals in a wide range of environments
+Finally, several of the included papers focus on an ability of simulating humans. \textcite[p. 3-4]{Liu_2021} defines AI as \textquote{A broad range of techniques and approaches of computer science to simulate human intelligence in machines that are programmed for thinking like humans and mimic human behaviours, capable of performing tasks.} Similarly, \textcite[p. 3]{vanBruxvoort_2021} adopt the definition given by \textcite{Shubhendu_2013}, and define AI as
+\begin{displayquote}
+    the study of ideas to bring into being machines that respond to stimulation consistent with traditional responses from humans, given the human capacity for contemplation, judgment and intention. Each such machine should engage in critical appraisal and selection of differing opinions within itself.
 \end{displayquote}
-Following the structure given by \textcite{Seppälä_2014}, the definition of intelligence constitutes the majority of the differentia of the definition, so all that is left is to conclude the genus.
+
+As shown, there exists a wide range of definitions of AI. All of them lack certain characteristics, and thus this paper creates a new, at least compared to the reviewed papers, definition of AI. The notion of artificial intelligence is built on the idea of \textit{intelligence}, and that is thus a natural starting point for a new definition. \textcite{Legg_2007} presents a selection of definitions of intelligence, gathered from encyclopedias, psychologists and AI researchers. Combining these, they define intelligence as a measure of \textquote{an agent’s ability to achieve goals in a wide range of environments} \parencite[p. 9]{Legg_2007}. Following the structure given by \textcite{Seppälä_2014}, the definition of intelligence constitutes the majority of the differentia of the definition, so all that is left is to conclude the genus.
 
 One way of finding the genus of the definition of artificial intelligence is through defining the term \textit{artificial}. An in-depth attempt at this is done by \parencite{Bianchini_2021}, who compares synthetic biology and artificial intelligence to create a common definition of what can be considered artificial. In the end, \citeauthor{Bianchini_2021} concludes that
 \begin{displayquote}[{\cite[p. 13]{Bianchini_2021}}][.]
@@ -41,10 +39,28 @@ The rest of this paper will be based on this definition.
 
 
 \subsubsection{Artificial intelligence system}
-\todo[inline]{Insert the definition of AI into a lifecycle socio-technical system}
 % - AI system
 %       "We take a socio-technical perspective, i.e., view the whole system of the algorithm as a technical component implemented in a technical infrastructure and an organizational structure accompanied by associated rules and regulations" (van Bruxvoort and van Keulen)
 % - Lifecycle socio-technical system
+Definitions of AI systems are sparse within the reviewed literature, although some attempts are made. \textcite{Brand_2022} adopts his definition of \textquote{automated decision system} from \textcite{canada_AIsystem}, who defines it follows:
+\begin{displayquote}
+    Includes any technology that either assists or replaces the judgement of human decision-makers. These systems draw from fields like statistics, linguistics, and computer science, and use techniques such as rules-based systems, regression, predictive analytics, machine learning, deep learning, and neural nets. \parencite{canada_AIsystem}
+\end{displayquote}
+
+AI systems as defined by \textcite{Dignum_2021} are based directly off the definition of AI, and is defined as 
+\begin{displayquote}
+    A software system (possibly embedded in hardware) designed by humans that, given a complex goal, is able to take a decision based on a process of perception, interpretation and reasoning based on data collected about the environment and that meets the properties of: 
+    \begin{itemize}
+        \item autonomy, meaning that the system is able to deliberate and act with the intent of reaching some task-specific goal without external control 
+        \item adaptability, meaning that the system is able to sense its environment and update its behaviour to changes in the environment 
+        \item interactivity, meaning that the system acts in a physical or digital dimension where people and other systems coexist. \parencite[p.~2]{Dignum_2021}
+    \end{itemize}
+\end{displayquote}
+
+Finally, \textcite[p.~8]{Merhi_2022} looks at what an AI system cannot do, and defines them as \textquote{robots and machines that have a limited ability and lack the intelligence that a human has to make a decision,} while \textcite[p.~2]{vanBruxvoort_2021} adopts a \textquote{socio-technical perspective} and \textquote{view the whole system of the algorithm as a technical component implemented in a technical infrastructure and an organizational structure accompanied by associated rules and regulations.}
+
+This paper adopts the definition of AI systems as given by \textcite{Taddy_2018_AIsystem}. He argues that AI systems consist of three pillars that are required for the system to work -- domain structure, data generation and a machine learning routine. The domain structure
+
 
 
 \subsubsection{Responsible artificial intelligence}

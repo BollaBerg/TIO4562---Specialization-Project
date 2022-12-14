@@ -9,7 +9,7 @@ For an AI system to be responsible, it should strive to maximize the four core p
 
 To achieve this, AI systems should be designed based on a set of instrumental principles. These provide responsibility through supporting and facilitating for the core principles, and should be adapted to the organisation developing and using the system, the context it is used in, and the goals and implementations of the system itself. An AI system could be Transparent, in that decisions can be explained and understood, which typically leads to increased Justice and Autonomy. The system could be Accountable, in that responsibility for its decisions are distributed among organisations and individuals creating and using the system, which facilitate the Justice and Non-maleficence of the system. The same principles can be strengthened by ensuring the Privacy of the users and stakeholders impacted by the system. Finally, systems can be Sustainable, in that their environmental footprint is minimized, or Trustworthy, by ensuring they work optimally and as expected, both contributing to increasing the core principles.
 
-One key barrier preventing a wide adoption of responsible AI is the gap between abstract ethical principles and the concrete work being done by AI developers in the industry. To aid this, this paper developed a framework for selecting principles relevant for a project, and converting these to concrete implementations that can be followed, tested and used during development of the system. This principle is presented in \autoref{sec:framework}.
+As shown in \autoref{sec:results-barriers}, a key barrier preventing a wide adoption of responsible AI is the gap between abstract ethical principles and the concrete work being done by AI developers in the industry. To aid this, this paper developed a framework for selecting principles relevant for a project, and converting these to concrete implementations that can be followed, tested and used during development of the system. This principle is presented in \autoref{sec:framework}.
 
 
 \subsection{The EPNIC framework}
@@ -83,67 +83,96 @@ Some of the reviewed papers introduce frameworks for developing responsible AI. 
 
 AI4People, the framework introduced by \textcite{Floridi_2018}, is mostly focused on how policy makers may facilitate for responsible AI. The two frameworks therefore do not compete with each other. Instead, EPNIC can be used to aid some of the action points proposed in AI4People, such as by facilitating for auditing through documentation of each step.
 
-\textcite{Peters_2020} present two frameworks for responsible AI -- the Responsible Design Process (RDP), and the Spheres of Technology (SoT). The first, RDP, consists of five steps showcasing different development stages, with Research, Insights, Ideation, Prototypes and Evaluation. Although the framework was originally developed to responsibly design new technology, it has great potential for working alongside the EPNIC framework. The first two stages, Research and Insight, are used to discover needs and preferences from stakeholders. These can be used to either support, or fully conduct, step two and three of EPNIC -- Principles and Norms -- where the goal is to combine different inputs, including from stakeholders, to create principles and norms for the system. The next two steps of RPD, Ideation and Prototypes, take previously generated insights and create solutions based on them, and can therefore be used to generate implementations from the previously discovered norms. Finally, RPD's Evaluation and EPNIC's Continue have the same goal, continually reassessing the responsibility of a system. This shows that the two frameworks -- the Responsible Design Process and EPNIC -- have great potential for success when used together.
+\textcite{Peters_2020} present two frameworks for responsible AI -- the Responsible Design Process (RDP), and the Spheres of Technology. The Responsible Design Process consists of five steps showcasing different development stages, with Research, Insights, Ideation, Prototypes and Evaluation. Although the framework was originally developed to responsibly design new technology, it has great potential for working alongside the EPNIC framework. The first two stages, Research and Insight, are used to discover needs and preferences from stakeholders. These can be used to either support, or fully conduct, step two and three of EPNIC -- Principles and Norms -- where the goal is to combine different inputs, including from stakeholders, to create principles and norms for the system. The next two steps of the Responsible Design Process, Ideation and Prototypes, take previously generated insights and create solutions based on them, and can therefore be used to generate implementations from the previously discovered norms. Finally, the Responsible Design Process's Evaluation and EPNIC's Continue have the same goal, continually reassessing the responsibility of a system. This shows that the two frameworks -- the Responsible Design Process and EPNIC -- have great potential for success when used together.
 
 The second framework introduced by \textcite{Peters_2020}, the Spheres of Technology, maps the impact of technology to six different spheres -- Adoption, Interface, Task, Behavior, Life, and Society. This is differs from EPNIC in multiple ways, but can be used to ensure the selected principles, norms and implementations cover all possible impacts of the AI system.
 
-\textcite{Siala_2022}
-\textcite{vanBruxvoort_2021}
-\textcite{Werder_2022}
-\textcite{Wright_2018}
+\textcite{Werder_2022} introduce a framework for mitigating bias, thus supporting Justice, through data governance. This may be used as an implementation for responsible AI systems developed using the EPNIC framework, if it is relevant to the context, organisation and design of the system being developed.
+
+The framework introduced by \textcite{Wright_2018} is designed to gather expectations and inputs from stakeholders, and evaluating how well these expectations are met. This could integrate with the EPNIC framework in two ways. First, the framework from \textcite{Wright_2018} could be used during the Existence-step of the EPNIC framework, to evaluate whether the stakeholders' expectations can realistically be met in a responsible way, and thus whether the system should exist in the first place. Secondly, the expectations can be used to create principles and norms when following the EPNIC framework, as they give a good indication of stakeholder values, prioritizations and concretizations. The two frameworks, then, should be used alongside each other to develop responsible AI systems.
+
+Some additional papers also introduce what they refer to as frameworks for responsible AI. These are, however, targeting laws and regulations \parencite{Brand_2022} or the finance industry \parencite{Rizinski_2022}, or focused on defining responsible AI's place in society \parencite{Buhmann_2021}, categorizing algorithms \parencite{Cheng_2021}, assessing the impact of AI \parencite{Havrda_2020}, mapping expectations of socio-technical systems \parencite{Minkkinen_2021} or evaluating how organisational culture impacts responsible AI initiatives \parencite{Rakova_2021}, rather than finding ways to implement responsible AI. As such, comparing these to the EPNIC framework is not relevant for this paper.
 
 
 \subsection{Observations}
+% Lack of quantitative research
+% Lack of stakeholder inclusion in the research
+As shown in \autoref{tab:summary-methodology}, only five of the reviewed papers (9\%) conducted quantitative surveys, and only four (7\%) conducted qualitative surveys. Of these, only five papers included surveys conducted on stakeholders not working directly on developing AI (i.e., representative samples of the public, healthcare professionals, etc.). This shows that most of the reviewed papers look inward, at previous research, existing guidelines, experts, and professionals developing AI systems. While basing work on existing research is important \parencite{Tranfield_2003}, this prevents new inputs from outsiders, and could potentially lead to interesting insights from stakeholders being missed. Similar exclusion of stakeholders has also been found in commercial guidelines for responsible AI, where only 38\% of the papers reviewed by \textcite{Bélisle-Pipon_2022} engaged stakeholders -- and only 9\% involved ordinary citizens. A worst-case scenario is that stakeholders are left out of the process of defining what constitutes a responsible and ethical AI system. As the goal of responsible AI is to develop AI systems that operate for the good of humanity, this could ultimately lead to a collapse of the whole research field.
+
+
 % Discuss differences between responsible AI principles and RRI principles (Dignum 2019, p. 58)
 % Relate back to ethics and RRI
+\todo[inline]{Discuss differences between responsible AI principles and RRI principles}
+
 
 % "Ethics washing" / Ethics shopping (Morley, barriers)
-
-% Lack of quantitative research
-
-As shown in \autoref{fig:principle-counts}, the most used principles are Transparency, Justice and Non-maleficence. 
-\textcite{Hagendorff_2020} claim that the popularity and broad usage of principles like \textit{Fairness} and \textit{Transparency} is because they reflect \textquote{the \textquote{male way} of thinking about ethical problems} (p.~103), in that they are focused on, and solvable by, technical tools and methods. Their popularity, then, comes as a result of a misbalance of genders within the field of AI \parencite{Hagendorff_2020}.
-% Trust is core outcome, but not used as principle
-
-% I.e., lack of implementation guides / most guidelines are very general and vague (maybe a "how to implement RAI" subsection?)
-%   - Are also found in general ethics: https://www.scopus.com/record/display.uri?eid=2-s2.0-0025411067&origin=resultslist&sort=cp-f&src=s&st1=autonomy+AND+beneficence+AND+justice&nlo=&nlr=&nls=&sid=4734d518162d88ad8f175bc2a82e4e4f&sot=b&sdt=b&sl=41&s=ALL%28autonomy+AND+beneficence+AND+justice%29&relpos=9&citeCnt=324&searchTerm=
-
-\subsection{Limitations}\label{sec:Limitations}
-% Focused on Responsible AI, while the field of AI ethics is much broader. Does not constitute a complete taxonomy of AI ethics, but maybe that should be done?
-% Compare Scopus search results for different related terms
-
-% Only barely touches the field of AI governance, but that is well done by (Gianni R., Lehtinen S., Nieminen M.)
-
-% This review of guidelines (if such review is done) does not consider the methodology of the guidelines, merely the principles they propose. The methodology has been critizised already (point to Bélisle-Pipon; Gianni R., Lehtinen S., Nieminen M.)
-
-% Content-driven, rather than statistical, literature review. No indications of statistical relevance of findings, etc. Other authors have performed statistical reviews of AI in healthcare (Fosso Wamba S., Queiroz M.M.)
+In a time when countries are accused of using sports for sportswashing \parencite{Fruh_2022_sportswashing,Wearing_2022_sportswashing}, organisations are accused of using fake eco-friendliness for greenwashing \parencite{Gibbens_2022_greenwashing}, and even the US military is accused of using Pride for pinkwashing \parencite{Kane_2022_pinkwashing}, some (e.g. \cite{Gianni_2022,Havrda_2020,Morley_2021}) have raised concerns that responsible AI can be used for ethics washing, i.e., that organisations may publicly adopt ethical principles to show that their AI systems are responsible and ethical, without changing the underlying, unethical practice \parencite{Morley_2021}. These organisations would then claim benefits of responsible AI, such as increased stakeholder trust and long-term profitability, without actually having responsible systems. To avoid this, organisations should set long-term responsible goals, and publicly show their processes towards responsibility, in addition to the overarching principles they have adopted \parencite{Rakova_2021}. By being transparent about how responsible AI is achieved, not just the abstract principles constituting the goal, organisations can ensure their stakeholders that the AI systems they interact with are actually safe, thus sparing them from such accusations.
 
 
-\subsubsection{Alternative terms for responsible AI}
-\label{sec:results-alernative-terms}
-% A comparison of the different terms for responsible AI I have seen throughout the review, and how they compare to each other.
-% Use as base for future research -- a complete taxonomy of the field, establishing common and standardized terms
-% Possibly a comparison of SCOPUS hits for the given terms, to show their popularity in comparison to each other
+% Trust is core outcome, but rarely used as principle
+An interesting observation is that trust is mentioned as one of the core advantages of developing responsible AI, yet it is one of the least popular principles among the reviewed papers. Although pinpointing the exact reason for this is hard, a potential reason is that trust requires two parties, a trustor, i.e., the party that trusts, and a trustee, i.e., the party that is trusted \parencite{Huang_2006_trust}. In comparison, the other principles, such as beneficence, only require one party, the party that creates benefits. This means that trust is not something that can be created internally in an organisation or AI system, but must be created in partnership with trustors. By using stakeholders as trustors, it is clear that trust is something that must be created through having trustworthy systems, and should therefore be considered as the output of responsible AI, rather than the input.
 
+
+\subsection{Limitations}
+\label{sec:Limitations}
+In the words of \textcite[p.~2160]{Morley_2020}, \textquote{all research projects have their limitations and this one is no exception.} Although this paper attempts to create an understanding of how AI systems can be responsible, it does so by solely looking at academic papers. As shown by \textcite{AlgorithmWatch}, much work has been done on developing guidelines for responsible AI in both governments and industries around the world. Although some of the reviewed papers have reviewed these (e.g., \cite{Bélisle-Pipon_2022,Fjeld_2020,Jobin_2019,Ryan_2021}) excluding non-academic guidelines from the review brings with it the potential for missing several important observations, principles and frameworks that are not included in the reviewed papers.
+
+% Potential bias even with selected methodology
+Although the methodology of systematic literature reviews is designed to minimize bias, \textcite{Tranfield_2003} highlights the eligibility assessment of papers to be a potential source for bias, as subjective opinion is needed to evaluate whether a given document should be included in the review. This is especially true for this paper, as all the research has been conducted by one person. This leaves limited possibility to discuss any uncertainties, although my supervisor has available for some cases. Although this creates a risk that the selection of papers -- and thus the included principles -- may be biased, the fact that the found principles are typically used in multiple reviewed papers indicates that the results of this paper are likely to be relatively generalizable.
+
+
+AI ethics is a wide field. A key limitation of this research is that it solely focused on one type of ethical AI -- responsible AI. Several of the reviewed papers mention more of these types, and \autoref{tab:synonyms} shows some of these, together with the number of articles using the term on Scopus. Interestingly, several of the included types have more results than responsible AI. This shows that while including multiple types would increase the scope of the paper, doing so would also provide new perspectives on how to develop AI responsibly, with the potential of uncovering new principles, norms and implementations, as well as frameworks and tools to convert these to practice.
+
+\begin{table}[ht]
+    \centering
+    \caption[Search results for types of ethical AI]{Search results for types of ethical AI. Searches were conducted on December 14, 2022, using the search string \texttt{"synonym AI" OR "synonym Artificial Intelligence"}, for example, \texttt{"Responsible AI" OR "Responsible Artificial Intelligence"}. Searches looked at article titles, abstracts and keywords.}
+    \label{tab:synonyms}
+    \begin{tabular}{p{0.4\textwidth}c}
+    \toprule
+        \textbf{Synonym} & \textbf{Scopus results} \\
+    \midrule
+        Explainable AI & 4260 \\
+        AI ethics & 620 \\
+        Trustworthy AI & 356 \\
+        Ethical AI & 267 \\
+        Human-centred AI & 245 \\
+        Responsible AI & 237 \\
+        AI for social good & 74 \\
+        Sustainable AI & 48 \\
+        Fair AI & 42 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
 
 
 \subsection{Future research}
-% Work is needed to empirically evaluate these frameworks%%% Future work %%%
 % A complete taxonomy of the field of AI ethics (all alternative terms for responsible AI)
-This paper is focused on responsible AI. While alternative terms for responsible AI are mentioned and briefly discussed in \autoref{sec:results-alernative-terms}, delving too deep into the many, somewhat overlapping terms for topics related to responsible AI is outside of the scope for this paper. To unify this wide range of terms, there is a need for an ontology or 
-\todo{Should I focus on one of those? I am not fully clear on the difference}
-taxonomy of the field. Ontologies are \textquote{representation vocabularies}, capturing the conceptualizations underlying terms \parencite{Chandrasekaran_1999} whereas taxonomies \textquote{help humans classify objects according to similarities and differences} \parencite{Kundisch_2022}. Creating an ontology or taxonomy is thus a method to formally create a unifying definition of terms \parencite{Uschold_1996}, and would help to harmonize the wide usage of different terms within the field of AI ethics. Although AI has been used to aid ontology creation \parencite{Stumme_2001} and significant efforts have gone into creating taxonomies of explainable AI \parencite{BarredoArrieta_2020,Clinciu_2019,Graziani_2022,Bellucci_2021,Brennen_2020}, as well as specific uses of AI \parencite{Gunn_2009,Ören_1994,Fong_2003}, there is a lack of a unifying ontology or taxonomy, and thus a lack of common, agreed-upon definitions, within responsible AI or the wider field of AI ethics. % Something to conclude how it would help?
+Ethical AI included several, somewhat overlapping terms, as shown in \autoref{tab:synonyms}. To unify this wide range of terms, future research should consider creating a complete taxonomy for the field of responsible AI. As taxonomies \textquote{help humans classify objects according to similarities and differences} \parencite{Kundisch_2022} and formally create a unifying definition of terms \parencite{Uschold_1996}, this could create a set of agreed-upon terms, with clearly defined separations, that would allow research to move in the same direction. Although this has not yet been done for the field of AI ethics, significant efforts have gone into creating taxonomies of explainable AI (e.g., \cite{BarredoArrieta_2020,Clinciu_2019,Graziani_2022,Bellucci_2021,Brennen_2020}), and these could be used as a starting point for mapping the whole field of AI ethics.
 
-\autoref{sec:definition-ai} looks at different definitions of artificial intelligence used throughout the reviewed papers. While a deep-dive into definitions and terminology is outside of the scope of this paper, there appears to be a lack of consensus regarding how to define the concept of artificial intelligence, which should be considered the backbone of responsible AI. As such, AI researchers should work together with researchers within the field of philosophy and language to create a unifying, agreed-upon definition of artificial intelligence. This, much like the above-mentioned taxonomy, would align future research along agreed-upon lines, thus ensuring work is moving the field in the same direction, while limiting disagreements and confusion.
 
-% Connections between the field of ethics (i.e., non-AI ethics, ethical theory and philosophy) and responsible AI?
+\autoref{sec:definition-ai} looks at different definitions of artificial intelligence used throughout the reviewed papers. While a deep-dive into definitions and terminology is outside of the scope of this paper, there appears to be a lack of consensus regarding how to define the concept of artificial intelligence, which should be considered the backbone of responsible AI. As such, AI researchers should work together with researchers within the field of philosophy and linguistics to create a unifying, agreed-upon definition of artificial intelligence. This, much like the above-mentioned taxonomy, would align future research along agreed-upon lines, thus ensuring work is moving the field in the same direction, while limiting disagreements and confusion.
 
-% Consider ways to democratically create frameworks / guidelines. Create guidelines anchored in the general public in a democratic way (Gianni R., Lehtinen S., Nieminen M.)
 
-% Create guidelines / principles rooted in public participation
+As shown in \autoref{fig:principle-counts}, the most used principles among the reviewed papers are Transparency and Justice. \textcite[p.~103]{Hagendorff_2020} claim that this is because these principles reflect \textquote{the \textquote{male way} of thinking about ethical problems}, in that they are focused on, and solvable by, technical tools and methods. To increase the adoption of the other principles discussed in \autoref{sec:results-rq1}, especially the remaining core principles of Autonomy, Beneficence and Non-maleficence, future research should work on developing tools and methods for facilitating, measuring and evaluating these. Two benefits would arise from being able to measure and evaluate the remaining principles. First, this would give AI developers and managers a better view of the responsibility of their systems, and would provide them with tools to ensure a targeted level of responsibility is achieved. Secondly, this would give lawmakers and governments an avenue for creating new laws that can ensure the responsibility of AI systems. As laws and regulations are major antecedents for responsible AI development, this would likely lead to an increase in the responsibility of both existing and new AI systems.
 
-% To handle ethics washing: Evaluate whether organisational practices and AI systems actually changes after implementing guidelines, or if they are a PR-tool. I.e., check if guidelines actually contribute to change, have an impact
 
-% This only reviewed principles introduced through academic papers. While some research has been done on principles from the industry, a comparison can be made, and - together with stakeholders - used to create a representative guide to responsible AI
+% Only barely touches the field of AI governance, but that is well done by (Gianni R., Lehtinen S., Nieminen M.)
+While the goal of this paper is to understand how to develop responsible AI systems, little attention has been paid to AI governance, or organisational governance as a whole. While the introduced framework is designed to push AI development in a responsible direction, this only makes up a small part of a much wider field of AI governance \parencite{Papagiannidis_2022_governance}. \textcite{Gianni_2022} discuss some methods for AI governance, but note that existing methods are limited. Future research should look at ways to properly govern AI systems in order to ensure they are responsible, and should consider how the EPNIC frameworks fit with existing, and future, methods for doing so.
 
-As there have been complaints regarding the barrier between academic research and responsible AI work in the industry, future research should adopt an implementation-based view, and consider ways to concretize and implement their findings in real-life scenarios.
+% Work is needed to empirically evaluate the framework
+Although the EPNIC framework is proposed to bridge the gap between abstract principles and actual development, it remains to be tested in real scenarios. Work should therefore be done to empirically evaluate the proposed framework, with the goal of both testing that it helps bridge the gap, as well as to discover ways the framework should be expanded to better fulfill this goal. This work can be done by conducting case studies, thus actually develop AI systems using the framework; by qualitative studies, such as surveying AI developers and -professionals to evaluate whether the framework could be applicable, useful and relevant for their work; or by quantitative studies, such as surveying AI organisations to estimate the probability of the framework being able to help bridge the gap for a given organisation.
+
+
+Although several studies call for the inclusion of stakeholders in responsible AI development, few of the reviewed papers survey stakeholders. Future research should therefore be conducted with a focus on stakeholders of AI systems. This would could take several forms. Some work should attempt to map stakeholders for a given AI system, thus making it easier for developers to discover relevant stakeholders for their work. These kind of stakeholder maps have been created in several other domains, such as fossil fuel \parencite{Yudha_2018_stakeholdermap}, digital health \parencite{An_2022_stakeholdermap} and nanotechnology \parencite{Hansen_2010_stakeholdermap}, so this work only needs to apply existing methods to the field of responsible AI. Other work could aim directly at the general public, to learn what principles and norms are important to laypersons. This work should first employ qualitative methods to get an overview of all potentially relevant principles and norms, before using quantitative methods to gain an understanding of which principles and norms are important to the general public. Although \textcite{Jakesch_2022} has already conducted one such survey, their work is based solely in the US, so more work is needed to be able to generalize the results.
+
+The EPNIC framework argues that organisations looking to develop responsible AI systems should find relevant principles, norms and implementations for their context, organisation and system to be developed. While the framework mentions inputs that should be considered, the actual process of finding these principles, norms and implementations is not described in the framework, nor in the rest of the paper. Although a selection of principles are described in \autoref{sec:results-rq1}, highlighting that every AI system should focus on core principles, no methodology is provided for evaluating potential instrumental principles for a given system. As the selection process will vary depending on the context of a system, future research should apply the framework to different contexts and systems, with the goal of finding similarities in both processes and results that can be generalized. These findings should be used to both expand the current knowledge on how to assess principles for responsible AI, as well as to extend the EPNIC framework with new knowledge and tools.
+
+
+As there have been complaints regarding the barrier between academic research and responsible AI work in the industry, future research should adopt an implementation-based view, and prioritize ways to concretize and implement their findings in real-life scenarios.
+
+
+% Dropped:
+% - Connections between the field of ethics (i.e., non-AI ethics, ethical theory and philosophy) and responsible AI?
+% - % Consider ways to democratically create frameworks / guidelines. Create guidelines anchored in the general public in a democratic way (Gianni R., Lehtinen S., Nieminen M.)
+%   - Create guidelines / principles rooted in public participation
+% - To handle ethics washing: Evaluate whether organisational practices and AI systems actually changes after implementing guidelines, or if they are a PR-tool. I.e., check if guidelines actually contribute to change, have an impact
