@@ -1,100 +1,108 @@
 \section{Method}
 \label{sec:Method}
-% In general - check with sources emailed from Nhien ("Examples of literature review paper") that I expand and cite enough of the methodology.
-% Need more references - why are we doing this as a 7-step process? Where can we create a foundation for "this is the right methodology"
-%   One example - PRISMA
-% Need to be more detailed on the process. Should I include "the results were imported into Excel", etc?
-% Need to expand on the actual review - what was the methodology here? What columns were used in Excel? Were any added later during the review?
-%   Ideally - sources for using pre-coded codes for analysis.
+% % In general - check with sources emailed from Nhien ("Examples of literature review paper") that I expand and cite enough of the methodology.
+% % Need more references - why are we doing this as a 7-step process? Where can we create a foundation for "this is the right methodology"
+% %   One example - PRISMA
+% % Need to be more detailed on the process. Should I include "the results were imported into Excel", etc?
+% % Need to expand on the actual review - what was the methodology here? What columns were used in Excel? Were any added later during the review?
+% %   Ideally - sources for using pre-coded codes for analysis.
 
-% Include the "piloting" of each step, using 10 articles to check that criteria fit and were understood completely.
-% Include something about the results of the pilot study, how (and why) it changed the main study
+% % Include the "piloting" of each step, using 10 articles to check that criteria fit and were understood completely.
+% % Include something about the results of the pilot study, how (and why) it changed the main study
 
-% Date for searches
+% % Date for searches
 
-% Check if we actually follow PRISMA
-% This paper follows the PRISMA methodology \parencite{PRISMA_2022}.
+% % Check if we actually follow PRISMA
 
-The research conducted for this paper consists of two literature reviews. First, a pilot study was conducted, to get an overview of the subject and terms used within the field of responsible AI. Based on the pilot, search strings and eligibility criteria were refined before the main study was conducted, and its results used for this paper. Both the literature reviews followed the same set of 7 steps, shown in \autoref{sec:method-steps}. All steps were done by the author himself.
+In order to have a factual basis for the literature review, it was conducted following the methodology laid out by \textcite{Tranfield_2003}. This consists of three stages, for a total of 10 phases. An overview of these phases is shown in \autoref{tab:tranfield_phases}.
 
-\subsection{Steps of the literature review}
-\label{sec:method-steps}
-The literature reviews consisted on 7 steps:
+\begin{table}[ht]
+    \centering
+    \caption[Overview of the methodology used for this literature review]{Overview of the methodology used for this literature review. From \textcite{Tranfield_2003}.}
+    \label{tab:tranfield_phases}
+    \begin{tabular}{cl}
+        \toprule
+        \textbf{Stage I} & \textbf{Planning the review} \\
+        \midrule
+        Phase 0 & Identification for the need for a review \\
+        Phase 1 & Preparation of a proposal for a review \\
+        Phase 2 & Development of a review protocol \\
 
-\begin{description}
-    \item[\textnormal{(1)} Database search] A search was done using two databases - Scopus and Web of Science. These databases were selected to ensure maximum reach within the field, as they index a majority of peer reviewed journals relevant for this research. Both reviews limited their search results to documents written in the English language, and of type article, proceedings paper, book chapter or editorial.
+        \midrule
+        \textbf{Stage II} &  \textbf{Conducting a review} \\
+        \midrule
+        Phase 3 & Identification of research \\
+        Phase 4 & Selection of studies \\
+        Phase 5 & Study quality assessment \\
+        Phase 6 & Data extraction and monitoring progress \\
+        Phase 7 & Data synthesis \\
+
+        \midrule
+        \textbf{Stage III} & \textbf{Reporting and dissemination} \\
+        \midrule
+        Phase 8 & The report and recommendations \\
+        Phase 9 & Getting evidence into practice \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Stage I -- Planning the review}
+According to \textcite{Tranfield_2003}, the goal of stage I is to form a review panel -- whose job it is to direct the process and review disputes, and develop a concrete plan for the review. This stage also contains any scoping reviews conducted to get an overview of the selected topic \parencite{Tranfield_2003}.
+
+\paragraph{Identification for the need for a review}
+The identification for the need for a review is shown in \autoref{sec:Introduction}. The review panel for this paper consist of a single person -- the supervisor assigned to the paper. Any confusions were solved with her help, and she also directed the process and made sure it progressed over time, thus fulfilling the role of a review panel as described by \parencite{Tranfield_2003}.
+
+\paragraph{Preparation of a proposal for a review}
+As the author has limited experience with the field of responsible AI, a scoping study was conducted ahead of time. with the goal of getting an overview of the field of responsible AI, in order to help shape the main study conducted after. To avoid having to filter out technical articles, and thus save time, the scoping study primarily focused on papers written from a business perspectice.Thus, the scoping study was done searching two academic databases -- Scopus and Web of Science -- for papers containing the strings "Responsible AI" or a combination of the word "Responsible" with one of "Machine learning", "Artificial intelligence" or "AI", that also included the word "Business*". The complete search strings used for the scoping study is included in Appendix \ref{app:search-terms-pilot}.
+
+\paragraph{Development of a review protocol}
+Based on the findings of the scoping study, an informal review protocol was created. \textcite{Tranfield_2003} state that the review protocol ideally should be a formal document, and should be registered with a third-party group. While the review protocol for this paper was an informal document, and only kept internally, it was still developed before conducting the study, and not changed after the review had started. This is in line with other review protocols for management studies \parencite{Tranfield_2003}, which this should be considered as. The review protocol consisted of research questions (presented in \autoref{sec:Introduction}), the steps of the study (presented later in this section), and the eligibility criteria (shown in \autoref{tab:criteria}).
+
+\subsection{Stage II -- Conducting the review}
+\label{sec:method-stage2}
+The goal of this stage is to actually conduct the review, following the steps laid out in the review protocol \parencite{Tranfield_2003}. The review should consist of \textquote{a comprehensive, unbiased search} \parencite[p.~215]{Tranfield_2003}, a filtering based on the predefined eligibility criteria, and comprehensive coding of the results.
+
+\paragraph{Identification of research}
+The main finding from the scoping review was that the selection of search strings were too wide -- allowing all combinations of "Responsible" and synonyms for AI, while also too narrow -- requiring the inclusion of the word "Business*" in the results. The strings also lead to many papers that were not relevant for the selected research questions. Based on these findings, it was concluded that the literature review, instead of trying to adapt the search strings, should simply search for papers including the terms "Responsible AI" or "Responsible Artificial Intelligence". \textcite{Tranfield_2003} argue that searches should be conducted for both published papers, conference proceedings, unpublished papers, as well as several non-academic sources. In order to limit the scope of this paper, searches were conducted for published articles, conference papers, editorials and book chapters. The complete search strings that were used are included in Appendix \ref{app:search-terms-main}. 
+
+The same two databases were used as in the scoping study -- Scopus and Web of Science. They were both searched on October 4, 2022. The output of the search was a list of 397 academic papers.
+
+\paragraph{Selection of studies}
+The selection of studies was done in five steps. Although \textcite{Tranfield_2003} suggest conducting the study selection with more than one researcher, this was done by the author alone, due to the nature of this project. Step 3 -- abstract screening -- was adapted to minimize the bias that could come as a result of this. The steps of the selection were as follows:
+
+\begin{description}    
+    \item[\textnormal{(1)} Duplicate removal] After searching the two databases, two overlapping sets of papers were retrieved. In order to combine these sets, any duplicates between them were removed. This step removed 108 duplicates from the dataset.
     
-    \item[\textnormal{(2)} Duplicate removal] The results from the two database searches were combined in one file. Any papers indexed by both databases were removed.
+    \item[\textnormal{(2)} Title screening] In order to quickly filter out irrelevant papers, the titles of the results were screened, to check whether they fit with the eligibility criteria. Any records where there was uncertainty on whether the paper should be accepted were included and used in the next step. This step removed 72 records from the dataset, due to not fulfilling the eligibility criteria.
     
-    \item[\textnormal{(3)} Title screening] The titles of the results were screened, to check their fit with the pre-selected criteria. Any uncertain documents were included and used in the next step.
-    
-    \item[\textnormal{(4)} Abstract screening] The abstract of the included results were screened, to check their fit with the pre-selected criteria. This process was done twice:
+    \item[\textnormal{(3)} Abstract screening] The abstracts of the included results were screened, to check whether they fit with the eligibility criteria. As the review was conducted by one person, and the eligibility assessment is subjective, this may lead to bias in the results \parencite{Tranfield_2003}. To limit this, and ensure that all relevant papers were included in the review, this step was done twice.
     \begin{description}
-        \item[\textnormal{(4a)} Round one] The abstracts of all previously approved documents were reviewed. Any uncertain documents were used in round two.
-        \item[\textnormal{(4b)} Round two] The abstracts of the documents that were marked as uncertain in step (4a) were re-reviewed. Any documents that were still uncertain were excluded from the review.
+        \item[\textnormal{(3a)} Round one] First, all abstracts of the databased were reviewed. In cases where there was uncertainty, i.e. cases where it was unclear whether the paper should be included in the review, these were marked as uncertain and used in round two. This step removed 58 records from the dataset.
+        
+        \item[\textnormal{(3b)} Round two] The abstracts of the uncertain cases from round one (3a) were reviewed again. This assessment was conducted on a new day, in order to ensure that the papers got a fair second chance. The cases that were still uncertain were excluded from the review. This step removed 102 records from the dataset.
     \end{description}
     
-    \item[\textnormal{(5)} Full-text screening] The full text of the previously approved documents were read, to check their fit with the pre-selected criteria. Any uncertain documents were included.
+    \item[\textnormal{(4)} Full-text screening] All papers accepted thus far had their full text assessed, to check whether the papers fit with the eligibility criteria. Any uncertain cases in this step were supposed to be excluded. No cases were marked as uncertain during the actual review. This step removed 20 papers from the dataset.
     
-    \item[\textnormal{(6)} Snowballing] The reference lists of all approved documents were scanned, to find other relevant documents. Any possibly relevant documents went through the same steps as mentioned here, and any included documents were used as new sources of snowballing until no new and relevant articles were found. This was done to ensure maximum inclusion of relevant documents, and has been recommended by several studies (e.g., \cite{Greenhalgh_2005,Wohlin_2014}). Any uncertain documents were excluded.
-    
-    \item[\textnormal{(7)} The actual review] The results from both the systematic database search and snowballing were combined, and used to conduct the actual literature review.
+    \item[\textnormal{(5)} Snowballing] The reference lists of all accepted papers were scanned, to find other relevant sources. In order to only include relevant papers, all possibly relevant sources went through the same steps as mentioned here. Any papers that were included from snowballing then had their reference lists scanned, until no more relevant sources were found. Snowballing was done to ensure maximum inclusion of relevant documents, and has been recommended by several studies (e.g., \cite{Greenhalgh_2005,Wohlin_2014}). This step added 17 relevant documents to the dataset.
 \end{description}
 
 A flowchart of this process, as well as the number of papers included in each step in the main study is shown in \autoref{fig:PRISMA-flowchart}.
 
-
-\subsection{Pilot study}
-\todo[inline]{Mention that this was used as a scoping study, to }
-The aim of the pilot study was to get an overview of the subject and terms used within the field of responsible AI, as well as to get familiar with, and test, the process of systematic literature reviews. 
-
-Two databases, Scopus and Web of Science, were searched for documents related to responsible artificial intelligence and other connected terms, as well as business. The results were screened using the steps mentioned in \autoref{sec:method-steps}. The complete search strings used can be seen in Appendix \ref{app:search-terms-pilot}.
-
-The result of the pilot study was a better understanding of the field of responsible AI, but it was quickly understood that the results did little to answer the posed research questions. Both the search strings and the eligibility criteria were therefore reviewed, and used for the main study.
-
-\subsubsection{Eligibility criteria}
-\autoref{tab:criteria-pilot} shows the criteria used for checking the eligibility of documents in the main study. Note that criteria 7 and 8 were only used for the title screening, to ensure maximum inclusion of relevant documents.
-
-\begin{table}[htp]
+% Number of papers per stage, results from the methodology
+\begin{figure}[p]
     \centering
-    \caption{Eligibility criteria used for the pilot study.}
-    \label{tab:criteria-pilot}
-    \begin{threeparttable}
-    \begin{tabular}{cp{0.9\textwidth}}
-    \toprule
-        \textbf{\#} & \textbf{Criteria} \\
-    \midrule
-        1 & \textbf{Include} documents focusing on defining responsible AI or guidelines for responsible AI development. \\
-        2 & \textbf{Include} documents discussing antecedents for responsibility of AI systems. \\
-        3 & \textbf{Include} documents focusing on business advantages of Responsible AI systems. \\
-        \midrule
-        4 & \textbf{Exclude} technical documents. \\
-        5 & \textbf{Exclude} documents focusing on general (non-responsible) AI. \\
-        6 & \textbf{Exclude} documents focusing on specific, concrete implementations of AI. \\
-        \midrule
-        7\tnote{*} & \textbf{Include} documents discussing the future of AI. \\
-        8\tnote{*} & \textbf{Include} documents discussing ethical AI, ethics in AI or AI governance. \\
-    \bottomrule
-    \end{tabular}
-    \begin{tablenotes}
-        \footnotesize
-        \item [*] Only used for screening titles.
-    \end{tablenotes}
-\end{threeparttable}
-\end{table}
+    \import{./Images/}{PRISMA-flowchart}
+    \caption[Overview of literature review]{Overview of literature review. Adapted from \textcite{PRISMA_2022}.}
+    \label{fig:PRISMA-flowchart}
+\end{figure}
 
+The selection of studies followed the eligibility criteria shown in \autoref{tab:criteria}. One of the criteria -- number 10 -- was only used for filtering based on titles, in order to include as many relevant papers as possible. The rest of the criteria were used in all steps of the process.
 
-\subsection{Main study}
-The aim of the main study was to answer the research questions posed in \autoref{sec:Introduction}. This time, a wider search was conducted, searching the same two databases, Scopus and Web of Science, for documents directly related to responsible artificial intelligence. The documents were screened using the steps mentioned in \autoref{sec:method-steps}, and the results of the search are presented in the following sections. The complete search strings used can be seen in Appendix \ref{app:search-terms-main}.
-
-
-\subsubsection{Eligibility criteria}
-\autoref{tab:criteria-main} shows the criteria used for checking the eligibility of documents in the main study. Note that criteria 10 was only used for the title screening, to ensure maximum inclusion of relevant documents.
-
-\begin{table}[htp]
+\begin{table}[ht]
     \centering
-    \caption{Eligibility criteria used for the main study.}
-    \label{tab:criteria-main}
+    \caption{Eligibility criteria used for the literature review.}
+    \label{tab:criteria}
     \begin{threeparttable}
     \begin{tabular}{cp{0.9\textwidth}}
     \toprule
@@ -120,3 +128,99 @@ The aim of the main study was to answer the research questions posed in \autoref
     \end{tablenotes}
 \end{threeparttable}
 \end{table}
+
+\paragraph{Study quality assessment}
+According to \textcite{Tranfield_2003}, quality assessment of management papers can be conducted by either evaluating the methodology of the assessed paper, or by using the rating of the journal it was published in. For this review, it was decided that any journals with a rank of 0 from the Norwegian Register for Scientific Journals, Series and Publishers \parencite{kanalregisteret} were removed, as the rank indicates that a journal was rejected from the register. This led to one paper being rejected during full-text filtering (step 4).
+
+Due to limitations in the author's language skills, only English papers were to be used in the review. This led to one paper being rejected during full-text filtering (step 4), as it was written in Spanish.
+
+Additionally, it was decided that papers that were unavailable at NTNU, even with help from the libraries, were to be excluded from the review, for natural reasons. This led to one paper being rejected during full-text filtering (step 4).
+
+The rest of the papers rejected during full-text filtering ($n = 17$) were rejected for failing to fulfill the eligibility criteria. 5 of these contained no information, due to being e.g. workshop- or keynote summaries, while the other 12 were published paper that simply failed to meet the criteria.
+
+In the end, 54 documents were included in the review.
+
+\paragraph{Data extraction and monitoring progress}
+Data was extracted from the documents using an Excel document with pre-defined columns for coding. This method was first tested on a subset of 10 randomly selected documents, which led to the creation of two new columns -- \textit{Cases} and \textit{Other relevant data}. The final data extraction form thus consisted of five categories -- Metadata, Key concept definitions, Research questions, Added after initial test and Own summary -- and a total of 25 columns. An overview of the extraction form, as well as a description of each column, is shown in \autoref{tab:extraction-columns}. An example of an applied data extraction form is shown in \autoref{tab:coding-example} (\autoref{app:Coding-example}).
+
+\begin{longtable}{P{0.2\textwidth}p{0.75\textwidth}}
+    \caption{Description of columns used for data extraction}
+    \label{tab:extraction-columns} \\
+    \toprule
+    \textbf{Column} & \textbf{Description} \\
+    \endfirsthead
+    
+    \toprule
+    \textbf{Column} & \textbf{Description} \\
+    \midrule
+    \endhead
+
+    \bottomrule
+    \multicolumn{2}{r}{\tiny \textit{Continued on next page\dots}}
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+        \multicolumn{2}{l}{\textit{Metadata}} \\
+        \midrule
+        Author & Author of the paper \\
+        Title & Title of the paper \\
+        Source & Journal or publisher of the paper \\
+        Source rank & Rank of the source, according to \textcite{kanalregisteret} \\
+        Year & Publication year \\
+        Abstract & Abstract of the paper \\
+        Methodology & Methodology used by the paper \\
+        Sample & Sample used, where relevant \\
+        Context & Context of the paper \\
+        Contribution & Contribution of the paper \\
+
+        \midrule
+        \multicolumn{2}{l}{\textit{Key concept definitions}} \\
+        \midrule
+        AI & Definition of AI \\
+        Responsible AI & Definition of responsible AI \\
+        AI ethics & Definition of AI ethics \\
+        Synonyms & Synonyms for responsible AI used in the text \\
+        AI system & Definition of AI system \\
+
+        \midrule
+        \multicolumn{2}{l}{\textit{Research questions}} \\
+        \midrule
+        Principles & Principles for responsible AI used in the paper, with description \\
+        Antecedents & Antecedents for responsible AI mentioned in the paper \\
+        Outcomes & Non-business related outcomes of using responsible AI \\
+        Business advantages & Business advantages of responsible AI mentioned in the paper \\
+        Barriers & Barriers preventing responsible AI mentioned in the paper \\
+        Facilitators & Facilitators for responsible AI mentioned in the paper \\
+        Enabling & How to enable principles \\
+
+        \midrule
+        \multicolumn{2}{l}{\textit{Added after initial test}} \\
+        \midrule
+        Cases & Cases of responsible- or irresponsible AI systems \\
+        Other relevant data & Catch-all for relevant data that falls outside of these categories \\
+
+        \midrule
+        \multicolumn{2}{l}{\textit{Own summary}} \\
+        \midrule
+        Summary & Own summary of the paper, highlighting relevant information \\
+\end{longtable}
+
+\paragraph{Data synthesis}
+After extraction, data synthesis was conducted using meta-synthesis \parencite{Tranfield_2003} to compare the principles, antecedents and advantages introduced by the different papers, and how they align to solve the same overarching task of making AI responsible. As meta-synthesis aims to \textquote{identify theories, [\dots] or interpretative translations [\dots] from qualitative studies} \parencite[p.~218]{Tranfield_2003}, this was deemed to be an acceptable method for synthesizing the data.
+
+Due to most of the reviewed papers being of a qualitative nature, it was deemed that meta-analysis or realist synthesis \parencite{Tranfield_2003} were inappropriate methods for synthesizing this review. Although meta-ethnography \parencite{Tranfield_2003} was considered as a potential methodology for the principles used to answer RQ1, it was quickly found that \textcite{Ryan_2021} provided an exhaustive categorization of principles, thus negating the potential benefits to be gained from the open coding-approach of meta-ethnography.
+
+
+\subsection{Stage III -- Reporting and dissemination}
+The goal of Stage III is to create a comprehensive summary of the findings from the literature review, in order to make it easy for practitioners and other researchers to understand the current state of research within a field \parencite{Tranfield_2003}.
+
+\paragraph{The report and recommendations}
+The report, i.e., the summary of the findings, should consist of two parts -- a descriptive analysis of the field, describing distribution of metadata such as geographical background and age of the research, and a thematic analysis, describing themes and findings from the reviewed papers \parencite{Tranfield_2003}.
+
+A descriptive analysis of the reviewed papers is included in \autoref{sec:results-descriptive}. This analysis looks at the distribution of publishing year (i.e., age), methodology, geographical context, domain and journal rank of the reviewed papers. A thematic analysis, evaluating the definitions, principles, antecedents and business advantages included in the reviewed papers is included in the rest of \autoref{sec:Results}.
+
+
+\paragraph{Getting evidence into practice}
+\textcite{Tranfield_2003} argue that an important feature of systematic literature reviews is converting findings into actual implementations used in practice. This paper attempts to answer this by introducing a framework for implementing responsible AI principles in practical development of a project. This framework is described in \autoref{sec:framework}. This paper also discuss similarities between the reviewed papers, and summarizes methods for implementing the principles found during the review. Evaluating the proposed framework, and the implementation methods, is outside the scope of this paper.

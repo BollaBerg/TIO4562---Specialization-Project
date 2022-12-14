@@ -1,26 +1,149 @@
 \section{Discussion}
 \label{sec:Discussion}
-% Discuss differences between responsible AI principles and RRI principles (Dignum 2019, p. 58)
+The aim of this paper was to create an understanding of how AI systems can be designed to be responsible, through a systematic literature review. The results of the review, as well as answers to RQ1, RQ2 and RQ3 are presented in \autoref{sec:Results}. This section will attempt to connect these results and answers to the overarching aim of the paper, and use them to create a framework for responsible AI development. In addition, some observations are discussed, alongside limitations of this study -- and potential for future research.
 
-\subsection{The PNIC framework}
+\subsection{Developing responsible AI systems}
+Most of the reviewed papers agree that AI systems can be made responsible by following a set of ethical principles. Following the categorization given by \textcite{Ryan_2021}, this paper found 11 groups of principles for responsible AI. By adapting the notion of core principles used by \textcite{Canca_2020} and \textcite{Floridi_2018}, these were then distributed in two categories, resulting in four core and seven instrumental principles. 
+
+For an AI system to be responsible, it should strive to maximize the four core principles. First, it should be designed to provide Beneficence, by working towards doing good for humanity. It should ensure users and stakeholders maintain their Autonomy as far as possible, and that the decisions made represent Justice, in that they are not biased or discriminating. Finally, the AI systems should be Non-maleficent, in that it should do as much as possible to prevent harm, whether that is towards humans, other living things, the environment or the planet as a whole.
+
+To achieve this, AI systems should be designed based on a set of instrumental principles. These provide responsibility through supporting and facilitating for the core principles, and should be adapted to the organisation developing and using the system, the context it is used in, and the goals and implementations of the system itself. An AI system could be Transparent, in that decisions can be explained and understood, which typically leads to increased Justice and Autonomy. The system could be Accountable, in that responsibility for its decisions are distributed among organisations and individuals creating and using the system, which facilitate the Justice and Non-maleficence of the system. The same principles can be strengthened by ensuring the Privacy of the users and stakeholders impacted by the system. Finally, systems can be Sustainable, in that their environmental footprint is minimized, or Trustworthy, by ensuring they work optimally and as expected, both contributing to increasing the core principles.
+
+One key barrier preventing a wide adoption of responsible AI is the gap between abstract ethical principles and the concrete work being done by AI developers in the industry. To aid this, this paper developed a framework for selecting principles relevant for a project, and converting these to concrete implementations that can be followed, tested and used during development of the system. This principle is presented in \autoref{sec:framework}.
+
+
+\subsection{The EPNIC framework}
 \label{sec:framework}
 % Give a general explanation of the framework (project-level framework for converting abstract ethical principles into concrete implementations)
+The EPNIC-framework is a project-level framework created to help AI developers, designers and managers assess a proposed project, discover relevant ethical principles for the project and convert the abstract principles into concrete implementations that can be used during development. The framework is based on the Design for Values-approach described by \textcite{Dignum_2019}, but places it in a more concrete and development-focused framework. An overview of the EPNIC framework is given in \autoref{fig:PNIS-framework}.
+
 \begin{figure}[htp]
     \centering
-    \import{./Images/}{PNIC-framework}
-    \caption{Overview of the PNIC framework}
+    \import{./Images/}{EPNIC-framework}
+    \caption{Overview of the EPNIC framework}
     \label{fig:PNIS-framework}
 \end{figure}
 
+As calls have been made among the reviewed papers to include stakeholders in the development of responsible AI, these are included in all relevant steps of the framework. While selection of stakeholders depend on the project, it is crucial that this include as wide range of people as possible, in order to ensure everyone affected by the AI system gets to share their opinion on how the project should be developed.
+
+\subsubsection{Steps of the EPNIC framework}
 % Discuss each step in detail, including substeps
-% Discuss arguments for this (i.e., based on Dignum, key challenge is converting principles into practice)
-% Discuss how it aligns with existing frameworks for responsible AI
-%   And 3 pillars of AI systems, and RRI
+The EPNIC-framework consists of four main steps -- Existence, Principles, Norms, Implementations and Continue (EPNIC), as well as one substep -- Prioritized principles. These steps are explained in detail in the following pages.
+
+\paragraph{Existence}
+Every responsible AI project should start with assessing whether the system can be developed responsibly and should exist in the first place. This entails checking whether the goals of the system are beneficial and non-maleficent, and that these can be achieved without negatively impacting autonomy and justice in any significant way. If this is not possible, then the system cannot be developed in a responsible way, and should be abandoned.
+
+\paragraph{Principles}
+Once it is clear that the project can be developed responsibly, the process moves to the second step of the framework -- Principles. Here, the development team should use relevant laws and regulations for their system and context, together with existing business principles for their organisation and stakeholder values, to select ethical principles that apply to the project. It is important to include a wide range of stakeholders in this step, to ensure that all possibly relevant principles are considered for the system.
+
+As discussed in \autoref{sec:results-rq1}, core principles should be part of any responsible AI project, as they are the ones that directly contribute to the ethical value of a project. As such, the goal of this stage is to find the instrumental principles that contribute the most to the core principles of Autonomy, Beneficence, Non-maleficence and Justice.
+
+\paragraph{Prioritized principles}
+Once the project has a set of principles, the development team should combine internal prioritization of principles (from organisational strategies, organisation values, ethics panels and internal to the team) with stakeholders' prioritization, to create a list of prioritized principles. While ethical dilemmas may still appear, driving ethical discussion with no right or wrong answer, this gives the development team a starting point for the next steps, while also operating as a prioritization of limited resources.
+
+\paragraph{Norms}
+After prioritizing principles, the development team should utilize expert panels, stakeholders and the team itself to concretize the principles into norms, in the same way it should be done in the Design for Values-approach used by \textcite{Dignum_2019}. These norms are normative interpretations of the principles, and primarily state how the principles should be interpreted.
+
+An example of converting a principle to a norm is shown by \textcite{Benjamins_2019}, who describes three different interpretations of the principle of fairness (included in the core principle of Justice): Independence, Separation and Sufficiency. To better show the differences, each interpretation will be illustrated with an AI system meant to approve loans, where gender is a sensitive variable. Positive predictions means that the system believes the applicant will pay back the full loan, and a true positive means it is correct in its beliefs. 
+
+\begin{description}
+    \item[Independence] means that the proportion of positive predictions are the same for all sensitive groups \parencite{Benjamins_2019}. In the example, this means that if half of all men are approved for loans, half of all women should also be approved for loans.
+    
+    \item[Separation] means that the true positive and false positive rate is the same in all sensitive groups \parencite{Benjamins_2019}. In the example, this means that if 80\% of all men that end up paying their loans are approved by the system, 80\% of all women that end up paying their loans should also be approved. At the same time, if 90\% of men who fail to pay their loans are not approved, then 90\% of women in the same situation should also not be approved.
+    
+    \item[Sufficiency] means that the Positive Predictive Value (i.e, the proportion of true positive predictions divided by all positive predictions) is the same for all sensitive groups \parencite{Benjamins_2019}. In the example, this means that if 95\% of men who are approved for loans end up paying them back, then 95\% of women who are approved for loans should end up paying them back.
+\end{description}
+As it is impossible to achieve all three, the development team for this hypothetical scenario would have to decide, using all available resources, which interpretation suits their context, organisation, system and personal beliefs the best.
+
+\paragraph{Implementations}
+When the norms of the project are in place, the development team should use relevant laws and regulations, implementations used in academia and by experts, as well as their own ideas to create concrete implementations of the selected norms. These implementations should ideally be testable and measurable, and should, following Design for Values \parencite{Dignum_2019}, be explicitly connected to a specific part of the system.
+
+By creating concrete and testable implementations, these can be included in common software development practices, such as sprint plannings and code reviews \parencite{Dybå_2008_agile}. Each implementation is connected to a certain part of a system, making auditing of the implementation easy, as only specific parts of the system needs to be checked. As there is a direct line from principles, through norms to implementations, such audits also check that the norms, and by extension the principles, still apply to the system.
 
 
-\subsection{Limitations}
-\import{Sections}{45 Limitations}
+\paragraph{Continue}
+After all implementations have been designed, development of the AI system can begin. It is important that the developers keep the previously selected implementations in mind as they work on the system, to avoid accidentally disabling an implementation, thus disconnecting a norm from the system. This is made easier by connecting each implementation to specific parts of the system, as developers working on one part only need to remember the implementations connected to their area of work.
+
+Modern software development is a flexible process \parencite{Dybå_2008_agile}, and ethical values and bias may change over time \parencite{Nauck_2019}. This makes it important to review the previous steps of the framework, and managers of AI development projects should ensure regular reviews are conducted.
+
+Implementations are most closely related to the actual development process, and will shift as the project is developed. These should therefore be reviewed most frequently, to ensure that they are still implemented and relevant as the AI system adapts throughout its development. For AI organisations utilizing agile development methods, these reviews could be conducted as part of code- or sprint reviews \parencite{Dybå_2008_agile}.
+
+Norms only shift when the interpretation of principles shift. As such shifts may occur due to changes in the context or organisation, changes in the goals or design of the system, or through larger societal changes, these should still be reviewed regularly, but less frequently than the implementations. While the actual frequency depends on the specifics of the context, organisation and system, an example is to review these on a biannual or quarterly basis. If any norms are changed or adjusted during these reviews, implementations should be reviewed again, to ensure that the connection between principles, norms and implementations still hold.
+
+Principles are the least likely to shift, as this only occurs if laws and regulations, organisational values or societal values change. As such, these reviews may be conducted on a reactive basis, such as when relevant laws are changed, or on an annual, semi-annual or less frequent basis. If any principles, or the prioritization of these, are changed during the review, norms and implementations should also be reviewed again, to ensure that the connection between principles, norms and implementations still hold.
+
+The process of implementing and following the EPNIC framework, any decisions taken along the way and the results of each step, as well as the reviews, should be clearly documented and saved. To provide transparency and auditability to the system, these documents should be made available for audits when needed, and should thus be understandable by both internal and external auditing teams.
+
+\subsubsection{The EPNIC framework compared to existing frameworks}
+Some of the reviewed papers introduce frameworks for developing responsible AI. While the EPNIC framework has been designed to solve a previously unsolved gap between principles and practice, it overlaps with these existing frameworks on some accounts, and a comparison is therefore in order.
+
+\textcite{Chen_2020} introduce a framework for AI governance, built around a national registry of AI systems. Their framework is focused on regulating AI systems, and therefore applies to AI organisations and government systems, rather than project-level implementations of principles. The EPNIC framework can be used as a safeguard for high-impact systems, can provide documentation that can be used for creating annual reports, and can be used as a step towards increased auditability, all things that are included as part of the framework introduced by \textcite{Chen_2020}.
+
+\textcite{Dignum_2019} provides the Design for Values framework. As this is used as foundation for the EPNIC framework, the two align with each other, most notably through the connection between principles, norms and implementations. Although the frameworks are somewhat alike, the EPNIC framework focuses on the implementation details, including relevant inputs that should be used for each step, whereas Design for Values primarily attempts to connect existing software development methodologies to responsible AI. Instead of directly comparing the two frameworks, then, they should be used alongside each other, using Design for Values to find principles, norms and implementations, and using EPNIC to systematize the process, find the right inputs for each step and ensure steps are reviewed when needed.
+
+AI4People, the framework introduced by \textcite{Floridi_2018}, is mostly focused on how policy makers may facilitate for responsible AI. The two frameworks therefore do not compete with each other. Instead, EPNIC can be used to aid some of the action points proposed in AI4People, such as by facilitating for auditing through documentation of each step.
+
+\textcite{Peters_2020} present two frameworks for responsible AI -- the Responsible Design Process (RDP), and the Spheres of Technology (SoT). The first, RDP, consists of five steps showcasing different development stages, with Research, Insights, Ideation, Prototypes and Evaluation. Although the framework was originally developed to responsibly design new technology, it has great potential for working alongside the EPNIC framework. The first two stages, Research and Insight, are used to discover needs and preferences from stakeholders. These can be used to either support, or fully conduct, step two and three of EPNIC -- Principles and Norms -- where the goal is to combine different inputs, including from stakeholders, to create principles and norms for the system. The next two steps of RPD, Ideation and Prototypes, take previously generated insights and create solutions based on them, and can therefore be used to generate implementations from the previously discovered norms. Finally, RPD's Evaluation and EPNIC's Continue have the same goal, continually reassessing the responsibility of a system. This shows that the two frameworks -- the Responsible Design Process and EPNIC -- have great potential for success when used together.
+
+The second framework introduced by \textcite{Peters_2020}, the Spheres of Technology, maps the impact of technology to six different spheres -- Adoption, Interface, Task, Behavior, Life, and Society. This is differs from EPNIC in multiple ways, but can be used to ensure the selected principles, norms and implementations cover all possible impacts of the AI system.
+
+\textcite{Siala_2022}
+\textcite{vanBruxvoort_2021}
+\textcite{Werder_2022}
+\textcite{Wright_2018}
+
+
+\subsection{Observations}
+% Discuss differences between responsible AI principles and RRI principles (Dignum 2019, p. 58)
+% Relate back to ethics and RRI
+
+% "Ethics washing" / Ethics shopping (Morley, barriers)
+
+% Lack of quantitative research
+
+As shown in \autoref{fig:principle-counts}, the most used principles are Transparency, Justice and Non-maleficence. 
+\textcite{Hagendorff_2020} claim that the popularity and broad usage of principles like \textit{Fairness} and \textit{Transparency} is because they reflect \textquote{the \textquote{male way} of thinking about ethical problems} (p.~103), in that they are focused on, and solvable by, technical tools and methods. Their popularity, then, comes as a result of a misbalance of genders within the field of AI \parencite{Hagendorff_2020}.
+% Trust is core outcome, but not used as principle
+
+% I.e., lack of implementation guides / most guidelines are very general and vague (maybe a "how to implement RAI" subsection?)
+%   - Are also found in general ethics: https://www.scopus.com/record/display.uri?eid=2-s2.0-0025411067&origin=resultslist&sort=cp-f&src=s&st1=autonomy+AND+beneficence+AND+justice&nlo=&nlr=&nls=&sid=4734d518162d88ad8f175bc2a82e4e4f&sot=b&sdt=b&sl=41&s=ALL%28autonomy+AND+beneficence+AND+justice%29&relpos=9&citeCnt=324&searchTerm=
+
+\subsection{Limitations}\label{sec:Limitations}
+% Focused on Responsible AI, while the field of AI ethics is much broader. Does not constitute a complete taxonomy of AI ethics, but maybe that should be done?
+% Compare Scopus search results for different related terms
+
+% Only barely touches the field of AI governance, but that is well done by (Gianni R., Lehtinen S., Nieminen M.)
+
+% This review of guidelines (if such review is done) does not consider the methodology of the guidelines, merely the principles they propose. The methodology has been critizised already (point to Bélisle-Pipon; Gianni R., Lehtinen S., Nieminen M.)
+
+% Content-driven, rather than statistical, literature review. No indications of statistical relevance of findings, etc. Other authors have performed statistical reviews of AI in healthcare (Fosso Wamba S., Queiroz M.M.)
+
+
+\subsubsection{Alternative terms for responsible AI}
+\label{sec:results-alernative-terms}
+% A comparison of the different terms for responsible AI I have seen throughout the review, and how they compare to each other.
+% Use as base for future research -- a complete taxonomy of the field, establishing common and standardized terms
+% Possibly a comparison of SCOPUS hits for the given terms, to show their popularity in comparison to each other
+
+
 
 \subsection{Future research}
-% Work is needed to empirically evaluate these frameworks
-\import{Sections}{49 Future research}
+% Work is needed to empirically evaluate these frameworks%%% Future work %%%
+% A complete taxonomy of the field of AI ethics (all alternative terms for responsible AI)
+This paper is focused on responsible AI. While alternative terms for responsible AI are mentioned and briefly discussed in \autoref{sec:results-alernative-terms}, delving too deep into the many, somewhat overlapping terms for topics related to responsible AI is outside of the scope for this paper. To unify this wide range of terms, there is a need for an ontology or 
+\todo{Should I focus on one of those? I am not fully clear on the difference}
+taxonomy of the field. Ontologies are \textquote{representation vocabularies}, capturing the conceptualizations underlying terms \parencite{Chandrasekaran_1999} whereas taxonomies \textquote{help humans classify objects according to similarities and differences} \parencite{Kundisch_2022}. Creating an ontology or taxonomy is thus a method to formally create a unifying definition of terms \parencite{Uschold_1996}, and would help to harmonize the wide usage of different terms within the field of AI ethics. Although AI has been used to aid ontology creation \parencite{Stumme_2001} and significant efforts have gone into creating taxonomies of explainable AI \parencite{BarredoArrieta_2020,Clinciu_2019,Graziani_2022,Bellucci_2021,Brennen_2020}, as well as specific uses of AI \parencite{Gunn_2009,Ören_1994,Fong_2003}, there is a lack of a unifying ontology or taxonomy, and thus a lack of common, agreed-upon definitions, within responsible AI or the wider field of AI ethics. % Something to conclude how it would help?
+
+\autoref{sec:definition-ai} looks at different definitions of artificial intelligence used throughout the reviewed papers. While a deep-dive into definitions and terminology is outside of the scope of this paper, there appears to be a lack of consensus regarding how to define the concept of artificial intelligence, which should be considered the backbone of responsible AI. As such, AI researchers should work together with researchers within the field of philosophy and language to create a unifying, agreed-upon definition of artificial intelligence. This, much like the above-mentioned taxonomy, would align future research along agreed-upon lines, thus ensuring work is moving the field in the same direction, while limiting disagreements and confusion.
+
+% Connections between the field of ethics (i.e., non-AI ethics, ethical theory and philosophy) and responsible AI?
+
+% Consider ways to democratically create frameworks / guidelines. Create guidelines anchored in the general public in a democratic way (Gianni R., Lehtinen S., Nieminen M.)
+
+% Create guidelines / principles rooted in public participation
+
+% To handle ethics washing: Evaluate whether organisational practices and AI systems actually changes after implementing guidelines, or if they are a PR-tool. I.e., check if guidelines actually contribute to change, have an impact
+
+% This only reviewed principles introduced through academic papers. While some research has been done on principles from the industry, a comparison can be made, and - together with stakeholders - used to create a representative guide to responsible AI
+
+As there have been complaints regarding the barrier between academic research and responsible AI work in the industry, future research should adopt an implementation-based view, and consider ways to concretize and implement their findings in real-life scenarios.
